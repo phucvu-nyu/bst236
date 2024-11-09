@@ -12,9 +12,43 @@ The `for` loop is one of the most common forms of iteration, and **it's particul
 
 The following function uses a `for` loop to perform a summation of $1 + 2 + \dots + n$, with the sum being stored in the variable `res`. It's important to note that in Python, `range(a, b)` creates an interval that is inclusive of `a` but exclusive of `b`, meaning it iterates over the range from $a$ up to $b−1$.
 
-```src
-[file]{iteration}-[class]{}-[func]{for_loop}
-```
+=== "Python"
+
+    ```python
+    def for_loop(n: int) -> int:
+        """for loop"""
+        res = 0
+        # Loop sum 1, 2, ..., n-1, n
+        for i in range(1, n + 1):
+            res += i
+        return res
+    ```
+
+=== "C++"
+
+    ```cpp
+    int forLoop(int n) {
+        int res = 0;
+        // Loop sum 1, 2, ..., n-1, n
+        for (int i = 1; i <= n; i++) {
+            res += i;
+        }
+        return res;
+    }
+    ```
+
+=== "R"
+
+    ```r
+    for_loop <- function(n) {
+        res <- 0
+        # Loop sum 1, 2, ..., n-1, n
+        for (i in 1:n) {
+            res <- res + i
+        }
+        return(res)
+    }
+    ```
 
 The figure below represents this sum function.
 

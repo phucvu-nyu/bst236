@@ -9,7 +9,7 @@ Whether you're taking your first steps into algorithms and data analysis, or you
 
 !!! success "Prerequisites"
 
-    You should know how to write and read simple code in python and R.
+    You should know how to write and read simple code in [python](https://www.python.org/) and [R](https://www.r-project.org/). You should also have basic knowledge of [probability](https://www.coursicle.com/harvard/courses/BIOSTAT/230/), [statistics](https://www.coursicle.com/harvard/courses/BIOSTAT/232/), and [linear algebra](https://qrd.college.harvard.edu/classes/math-22a-vector-calculus-and-linear-algebra-i).
 
 ## Content structure
 
