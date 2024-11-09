@@ -1,0 +1,192 @@
+# Project information
+site_name: BST235 Computing
+site_url: https://junwei-lu.github.io/bst236/
+site_description: "BST236 Computing"
+docs_dir: build/docs
+site_dir: site
+# Repository
+edit_uri: tree/main/docs
+version: 1.0.0
+
+
+# Copyright
+copyright: Junwei Lu, Department of Biostatistics, Harvard T.H. Chan School of Public Health<br>The website is built upon the <a href="https://www.hello-algo.com/en/">Hello Algo</a> project.
+
+# Configuration
+theme:
+  name: material
+  custom_dir: build/overrides
+  language: en
+  features:
+    - announce.dismiss
+    #- content.action.edit
+    # - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.prune
+    # - navigation.sections
+    # - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - scheme: default
+      primary: white
+      accent: teal
+      toggle:
+        icon: material/theme-light-dark
+        name: Light mode
+    - scheme: slate
+      primary: black
+      accent: teal
+      toggle:
+        icon: material/theme-light-dark
+        name: Light mode
+  font:
+    text: Noto Sans SC
+    code: Fira Code
+  favicon: assets/images/favicon-stat.png
+  logo: assets/images/stat-logo.svg
+  icon:
+    logo: logo
+    repo: fontawesome/brands/github
+    edit: fontawesome/regular/pen-to-square
+
+extra:
+  #alternate:
+    #- name: English
+      #link: /
+      #lang: en
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/junwei-lu/
+    #  - icon: fontawesome/brands/x-twitter
+    #   link: https://twitter.com/
+    - icon: fontawesome/solid/code
+      link: https://junwei-lu.github.io/
+  generator: false
+  #status:
+  #  new: 
+
+# Plugins
+plugins:
+  - search
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: none
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: false
+      auto_caption: false
+      caption_position: bottom
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  # - pymdownx.emoji:
+  #     emoji_index: !!python/name:materialx.emoji.twemoji
+  #     emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.keys
+  # - pymdownx.magiclink:
+  #     repo_url_shorthand: true
+  #     user: squidfunk
+  #     repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js
+  # - javascripts/katex.js 
+  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js  
+  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+
+extra_css:
+  - stylesheets/extra.css
+  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+
+# Page tree
+nav:
+  - Course Information:
+    - chapter_syllabus/index.md
+  - Chapter. Preface:
+    - chapter_preface/index.md
+    - About this course: chapter_preface/about_the_course.md
+  - Chapter. Encounter with algorithms:
+    - chapter_introduction/index.md
+    - Algorithms are everywhere: chapter_introduction/algorithms_are_everywhere.md
+    - What is an algorithm: chapter_introduction/what_is_dsa.md
+    - Summary: chapter_introduction/summary.md
+  - Chapter. Complexity analysis:
+    - chapter_computational_complexity/index.md
+    - Algorithm efficiency assessment: chapter_computational_complexity/performance_evaluation.md
+    - Iteration and recursion: chapter_computational_complexity/iteration_and_recursion.md
+    - Time complexity: chapter_computational_complexity/time_complexity.md
+    - Space complexity: chapter_computational_complexity/space_complexity.md
+    - Summary: chapter_computational_complexity/summary.md
+  - Chapter. Sorting:
+    - chapter_sorting/index.md
+    - Sorting algorithms: chapter_sorting/sorting_algorithm.md
+    - Selection sort: chapter_sorting/selection_sort.md
+    - Insertion sort: chapter_sorting/insertion_sort.md
+    - Merge sort: chapter_sorting/merge_sort.md
+    #- Bubble sort
+    #- Quick sort
+    #- Heap sort
+    #- Bucket sort
+    #- Counting sort
+    - Summary: chapter_sorting/summary.md
+  # - Chapter. Dynamic programming:
+  #   - chapter_dynamic_programming/index.md
+  #   - Introduction to dynamic programming: chapter_dynamic_programming/intro_to_dynamic_programming.md
+  #   - Characteristics of DP problems: chapter_dynamic_programming/dp_problem_features.md
+  #   - DP problem-solving approach: chapter_dynamic_programming/dp_solution_pipeline.md
+  #   - 0-1 Knapsack problem: chapter_dynamic_programming/knapsack_problem.md
+  #   - Unbounded knapsack problem: chapter_dynamic_programming/unbounded_knapsack_problem.md
+  #   - Edit distance problem: chapter_dynamic_programming/edit_distance_problem.md
+  #   - Summary: chapter_dynamic_programming/summary.md
+  - Appendix:
+    - chapter_appendix/index.md
+    - Installation: chapter_appendix/installation.md
+    - Contributing: chapter_appendix/contribution.md
+    - Terminology: chapter_appendix/terminology.md
+  - References:
+    - chapter_reference/index.md
