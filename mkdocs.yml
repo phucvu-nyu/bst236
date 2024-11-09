@@ -150,11 +150,6 @@ nav:
   - Chapter. Preface:
     - chapter_preface/index.md
     - About this course: chapter_preface/about_the_course.md
-  - Chapter. Encounter with algorithms:
-    - chapter_introduction/index.md
-    - Algorithms are everywhere: chapter_introduction/algorithms_are_everywhere.md
-    - What is an algorithm: chapter_introduction/what_is_dsa.md
-    - Summary: chapter_introduction/summary.md
   - Chapter. Complexity analysis:
     - chapter_computational_complexity/index.md
     - Algorithm efficiency assessment: chapter_computational_complexity/performance_evaluation.md
@@ -165,9 +160,9 @@ nav:
   - Chapter. Sorting:
     - chapter_sorting/index.md
     - Sorting algorithms: chapter_sorting/sorting_algorithm.md
-    - Selection sort: chapter_sorting/selection_sort.md
     - Insertion sort: chapter_sorting/insertion_sort.md
     - Merge sort: chapter_sorting/merge_sort.md
+    #- Selection sort
     #- Bubble sort
     #- Quick sort
     #- Heap sort
