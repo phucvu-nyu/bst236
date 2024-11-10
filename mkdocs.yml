@@ -147,10 +147,12 @@ extra_css:
 nav:
   - Course Information:
     - chapter_syllabus/index.md
-  - Chapter. Preface:
+  - Chapter. Introduction:
     - chapter_preface/index.md
     - About this course: chapter_preface/about_the_course.md
     - Code style: chapter_preface/code_style.md
+    - AI-assisted coding: chapter_preface/ai_copilot.md
+    - Reproducible coding: chapter_preface/reproducible.md
   - Chapter. Complexity analysis:
     - chapter_computational_complexity/index.md
     - Algorithm efficiency assessment: chapter_computational_complexity/performance_evaluation.md
