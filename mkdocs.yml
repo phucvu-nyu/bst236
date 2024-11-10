@@ -181,7 +181,8 @@ nav:
   - Appendix:
     - chapter_appendix/index.md
     - Installation: chapter_appendix/installation.md
+    - Github Classroom: chapter_appendix/github.md
     - Contributing: chapter_appendix/contribution.md
-    - Terminology: chapter_appendix/terminology.md
+    #- Terminology: chapter_appendix/terminology.md
   - References:
     - chapter_reference/index.md

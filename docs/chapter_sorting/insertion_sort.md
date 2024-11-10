@@ -8,6 +8,7 @@ The figure below shows the process of inserting an element into an array. Assumi
 
 ![Single insertion operation](insertion_sort.assets/insertion_operation.png)
 
+
 ## Algorithm process
 
 The overall process of insertion sort is shown in the figure below.
@@ -21,9 +22,20 @@ The overall process of insertion sort is shown in the figure below.
 
 Example code is as follows:
 
-```src
-[file]{insertion_sort}-[class]{}-[func]{insertion_sort}
+```python
+def InsertionSort(A):
+    for j in range(1, len(A)):
+        key = A[j]
+        i = j - 1
+        while (i >= 0) and (A[i] > key):
+            A[i+1] = A[i]
+            i = i - 1
+        A[i+1] = key
 ```
+
+??? pythontutor "Visualize Code"
+
+	https://pythontutor.com/render.html#code=%23%20from%3A%20http%3A//www.ece.uci.edu/~chou/py02/python.html%0Adef%20InsertionSort%28A%29%3A%0A%20%20%20%20for%20j%20in%20range%281,%20len%28A%29%29%3A%0A%20%20%20%20%20%20%20%20key%20%3D%20A%5Bj%5D%0A%20%20%20%20%20%20%20%20i%20%3D%20j%20-%201%0A%20%20%20%20%20%20%20%20while%20%28i%20%3E%3D%200%29%20and%20%28A%5Bi%5D%20%3E%20key%29%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20A%5Bi%2B1%5D%20%3D%20A%5Bi%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20i%20%3D%20i%20-%201%0A%20%20%20%20%20%20%20%20A%5Bi%2B1%5D%20%3D%20key%0A%0Ainput%20%3D%20%5B8,%203,%209,%2015,%2029,%207,%2010%5D%0AInsertionSort%28input%29%0Aprint%28input%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false
 
 ## Algorithm characteristics
 
@@ -44,3 +56,4 @@ Although bubble sort, selection sort, and insertion sort all have a time complex
 - Bubble sort is based on element swapping, which requires the use of a temporary variable, involving 3 unit operations; insertion sort is based on element assignment, requiring only 1 unit operation. Therefore, **the computational overhead of bubble sort is generally higher than that of insertion sort**.
 - The time complexity of selection sort is always $O(n^2)$. **Given a set of partially ordered data, insertion sort is usually more efficient than selection sort**.
 - Selection sort is unstable and cannot be applied to multi-level sorting.
+
