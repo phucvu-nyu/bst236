@@ -21,3 +21,13 @@ The main content of the book is shown in the figure below.
 - **Optimization**: introduce algorithms for solving optimization problems, including convex optimization, stochastic optimization, and more.
 - **Deep Learning**: introduce the pytorch, deep learning architectures, including neural networks, transformers, and more.
 - **Reproducible Workflows**: How to make your workflow reproducible and efficient. We will use Git, virtual environments, styled coding, AI assisted coding, and more.
+
+## Acknowledgements
+
+This course uses the materials from many fantastic resources. We thank the authors for these materials. Here are the list of resources we have used:
+
+- [Hello Algorithms](https://hello-algorithms.com/en/)
+- [INFO550 Data Science Toolkit](https://benkeser.github.io/info550/)
+- [MIT Missing Semester](https://missing.csail.mit.edu/)
+
+If any authors have concerns regarding the use of their materials or copyright issues, please contact us at [GitHub Issues](https://github.com/junwei-lu/bst236/issues). We are committed to respecting intellectual property rights and will promptly address any concerns.

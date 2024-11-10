@@ -1,7 +1,5 @@
 # Contributing
 
-This course website is built on the infrastructure of a fascinating open-source project [Hello Algo](www.hello-algo.com/en/). Many materials of this course are adapted from their book. We thank the authors for their selfless contributions to the open-source community.
-
 We welcome any contributions to improve the quality of the course. If you discover any typos, broken links, missing content, textual ambiguities, unclear explanations, or unreasonable text structures, please assist us in making corrections to provide readers with better quality learning resources.
 
 The GitHub IDs of all [contributors] will be displayed on the repository to thank them for their selfless contributions to the open-source community.
@@ -39,3 +37,8 @@ Use the following command to remove the deployment:
 ```shell
 docker-compose down
 ```
+
+# Resources
+
+- This course website is built on the infrastructure of a fascinating open-source project [Hello Algo](www.hello-algo.com/en/). Many materials of this course are adapted from their book. We thank the authors for their selfless contributions to the open-source community.
+- This course website is build on the package of [MkDocs](https://www.mkdocs.org/). MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. You can learn more about it [here](https://www.mkdocs.org/user-guide/).

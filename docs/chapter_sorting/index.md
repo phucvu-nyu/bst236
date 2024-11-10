@@ -1,9 +1,20 @@
 # Sorting
 
-![Sorting](../assets/covers/chapter_sorting.jpg)
 
 !!! abstract
 
-    Sorting is like a magical key that turns chaos into order, enabling us to understand and handle data in a more efficient manner.
+    In arrays of chaos and disarray,
+    Sorting algorithms light the way.
+    From insertion's dance, step by step,
+    To merge sort's divide, gracefully kept.
 
-    Whether it's simple ascending order or complex categorical arrangements, sorting reveals the harmonious beauty of data.
+    Sorting is a fundamental problem as an example for us to understand the concept of complexity.
+
+## Lectures
+
+- [Insertion Sort](insertion_sort.md)
+- [Merge Sort](merge_sort.md)
+
+## Resources
+
+

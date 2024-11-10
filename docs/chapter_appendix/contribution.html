@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>index</title>
+<title>contribution</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,16 +23,16 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="index_files/libs/clipboard/clipboard.min.js"></script>
-<script src="index_files/libs/quarto-html/quarto.js"></script>
-<script src="index_files/libs/quarto-html/popper.min.js"></script>
-<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="index_files/libs/quarto-html/anchor.min.js"></script>
-<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap-fe6593aca1dacbc749dc3d2ba78c8639.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="contribution_files/libs/clipboard/clipboard.min.js"></script>
+<script src="contribution_files/libs/quarto-html/quarto.js"></script>
+<script src="contribution_files/libs/quarto-html/popper.min.js"></script>
+<script src="contribution_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="contribution_files/libs/quarto-html/anchor.min.js"></script>
+<link href="contribution_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="contribution_files/libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="contribution_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="contribution_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="contribution_files/libs/bootstrap/bootstrap-fe6593aca1dacbc749dc3d2ba78c8639.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -46,16 +46,45 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="bst-236-computing-i" class="level1">
-<h1>BST 236 Computing I</h1>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../assets/covers/chapter_welcome_turing.png" class="img-fluid figure-img"></p>
-<figcaption>Turing</figcaption>
-</figure>
-</div>
-<p>Welcome to BST236! I am excited to welcome you to this foundational course where we will explore the integral aspects of statistical computing integrated with advanced generative AI technology. This course is for graduate students at <a href="https://www.hsph.harvard.edu/">Harvard T.H. Chan School of Public Health</a>. Our journey will cover a diverse array of topics from optimization techniques to advanced deep learning, all crucial for effective data analysis. This course is designed to bridge methods with practical application. We will teach how to write efficient and reproducible code with AI copilot. Through collaborative projects, hands-on exercises, and rigorous discussions, you’ll gain proficiency in both the conceptual and practical dimensions of computing. I am eager to engage with each of you and see the innovative solutions and perspectives you bring to our class. Let’s dive into an exciting semester of learning and discovery!</p>
-<p><a href="chapter_syllabus/">Dive in</a></p>
+<section id="contributing" class="level1">
+<h1>Contributing</h1>
+<p>We welcome any contributions to improve the quality of the course. If you discover any typos, broken links, missing content, textual ambiguities, unclear explanations, or unreasonable text structures, please assist us in making corrections to provide readers with better quality learning resources.</p>
+<p>The GitHub IDs of all [contributors] will be displayed on the repository to thank them for their selfless contributions to the open-source community.</p>
+<section id="content-fine-tuning" class="level3">
+<h3 class="anchored" data-anchor-id="content-fine-tuning">Content fine-tuning</h3>
+<p>You can follow these steps to modify text or code.</p>
+<ol type="1">
+<li>Open the our course <a href="https://github.com/junwei-lu/bst236">github repository</a>. Find the Markdown source file you want to modify.</li>
+<li>Modify the Markdown source file content, check the accuracy of the content, and try to keep the formatting consistent.</li>
+<li>Fill in the modification description at the bottom of the page, then click the “Propose file change” button. After the page redirects, click the “Create pull request” button to initiate the pull request.</li>
+</ol>
+<p>Figures cannot be directly modified and require the creation of a new <a href="https://github.com/krahets/hello-algo/issues">Issue</a> or a comment to describe the problem. We will redraw and replace the figures as soon as possible.</p>
+</section>
+<section id="content-creation" class="level3">
+<h3 class="anchored" data-anchor-id="content-creation">Content creation</h3>
+<p>If you are interested in participating in this open-source project, including translating code into other programming languages or expanding article content, then the following Pull Request workflow needs to be implemented.</p>
+<ol type="1">
+<li>Log in to GitHub and Fork the <a href="https://github.com/junwei-lu/bst236">code repository</a> of this book to your personal account.</li>
+<li>Go to your Forked repository web page and use the <code>git clone</code> command to clone the repository to your local machine.</li>
+<li>Create content locally and perform complete tests to verify the correctness of the code.</li>
+<li>Commit the changes made locally, then push them to the remote repository.</li>
+<li>Refresh the repository webpage and click the “Create pull request” button to initiate the pull request.</li>
+</ol>
+</section>
+<section id="docker-deployment" class="level3">
+<h3 class="anchored" data-anchor-id="docker-deployment">Docker deployment</h3>
+<p>In the <code>bst236</code> root directory, execute the following Docker script to access the project at <code>http://localhost:8000</code>:</p>
+<pre class="shell"><code>docker-compose up -d</code></pre>
+<p>Use the following command to remove the deployment:</p>
+<pre class="shell"><code>docker-compose down</code></pre>
+</section>
+</section>
+<section id="resources" class="level1">
+<h1>Resources</h1>
+<ul>
+<li>This course website is built on the infrastructure of a fascinating open-source project <a href="www.hello-algo.com/en/">Hello Algo</a>. Many materials of this course are adapted from their book. We thank the authors for their selfless contributions to the open-source community.</li>
+<li>This course website is build on the package of <a href="https://www.mkdocs.org/">MkDocs</a>. MkDocs is a fast, simple and downright gorgeous static site generator that’s geared towards building project documentation. You can learn more about it <a href="https://www.mkdocs.org/user-guide/">here</a>.</li>
+</ul>
 </section>
 
 </main>
