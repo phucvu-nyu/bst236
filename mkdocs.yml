@@ -150,6 +150,7 @@ nav:
   - Chapter. Preface:
     - chapter_preface/index.md
     - About this course: chapter_preface/about_the_course.md
+    - Code style: chapter_preface/code_style.md
   - Chapter. Complexity analysis:
     - chapter_computational_complexity/index.md
     - Algorithm efficiency assessment: chapter_computational_complexity/performance_evaluation.md
