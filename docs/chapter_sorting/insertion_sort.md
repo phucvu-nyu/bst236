@@ -22,16 +22,34 @@ The overall process of insertion sort is shown in the figure below.
 
 Example code is as follows:
 
-```python
-def InsertionSort(A):
-    for j in range(1, len(A)):
-        key = A[j]
-        i = j - 1
-        while (i >= 0) and (A[i] > key):
-            A[i+1] = A[i]
-            i = i - 1
-        A[i+1] = key
-```
+=== "Python"
+
+	```python
+	def InsertionSort(A):
+		for j in range(1, len(A)):
+			key = A[j]
+			i = j - 1
+			while (i >= 0) and (A[i] > key):
+				A[i+1] = A[i]
+				i = i - 1
+			A[i+1] = key
+	```
+=== "R"
+
+	```r
+	insertion_sort <- function(A) {
+		for (j in 2:length(A)) {
+			key <- A[j]
+			i <- j - 1
+			while (i >= 1 && A[i] > key) {
+				A[i + 1] <- A[i]
+				i <- i - 1
+			}
+			A[i + 1] <- key
+		}
+		return(A)
+	}
+	```
 
 ??? pythontutor "Visualize Code"
 
