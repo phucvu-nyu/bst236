@@ -150,18 +150,19 @@ nav:
   - Chapter. Introduction:
     - chapter_preface/index.md
     - About this course: chapter_preface/about_the_course.md
-  - Chapter. Principles of Scientific Coding:
+  - Chapter. Basics of Coding:
     - chapter_coding/index.md
     - Principles: chapter_coding/code_principle.md
-    - Best practices: chapter_coding/computing_workflow.md
-    - AI-assisted coding: chapter_coding/ai_copilot.md
-  - Chapter. Reproducibility:
-    - chapter_reproducible/index.md
-    - Git: chapter_reproducible/git.md
-    - Make: chapter_reproducible/make.md
-    - Virtual Environment: chapter_reproducible/venv.md
-    - Reproducible R: chapter_reproducible/R.md
-    - Docker: chapter_reproducible/docker.md
+    - Code in Style: chapter_coding/code_style.md
+    - AI Copilot: chapter_coding/ai_copilot.md
+  - Chapter. Computing Workflow:
+    - chapter_workflow/index.md
+    - Workflow: chapter_workflow/computing_workflow.md
+    - Git and GitHub: chapter_workflow/git.md
+    - Make: chapter_workflow/make.md
+    - Virtual Environment: chapter_workflow/venv.md
+    - Reproducible R: chapter_workflow/R.md
+    - Docker: chapter_workflow/docker.md
   - Chapter. Complexity analysis:
     - chapter_computational_complexity/index.md
     - Algorithm efficiency assessment: chapter_computational_complexity/performance_evaluation.md
