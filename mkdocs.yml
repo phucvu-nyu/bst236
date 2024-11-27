@@ -153,7 +153,7 @@ nav:
   - Chapter. Basics of Coding:
     - chapter_coding/index.md
     - Principles: chapter_coding/code_principle.md
-    - Code in Style: chapter_coding/code_style.md
+    - Code in Style: chapter_coding/coding_style.md
     - AI Copilot: chapter_coding/ai_copilot.md
   - Chapter. Computing Workflow:
     - chapter_workflow/index.md

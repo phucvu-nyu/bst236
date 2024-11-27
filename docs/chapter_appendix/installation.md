@@ -15,7 +15,6 @@ Most of the materials in this course are platform-independent. However, most of 
 
 For your local Integrated Development Environment (IDE), we suggest using Visual Studio Code (VS Code) - a lightweight, open-source editor. Head to the [VS Code official website](https://code.visualstudio.com/) to download and install the version that matches your operating system.
 
-VS Code features a robust marketplace of extensions that enables coding and debugging in virtually any programming language. Take Python for example - by installing the "Python Extension Pack", you gain full debugging capabilities for Python code. The figure below demonstrates how to install extensions.
 
 ### Github Copilot
 

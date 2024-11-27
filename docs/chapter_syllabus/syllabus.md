@@ -50,7 +50,7 @@ We allow and encourage you to use ChatGPT and other generative AI tools for the 
 
 ![GPT Generator](./syllabus.assets/syllabus_chatgpt.png)
 
-![GPT Zero](./syllabus.assets/syllabus_gptzero.png)
+<!-- ![GPT Zero](./syllabus.assets/syllabus_gptzero.png) -->
 
 ## Github Classroom 
 The homework and project will be assigned through Github Classroom. Refer to the [Appendix](../chapter_appendix/github.md) for more details.

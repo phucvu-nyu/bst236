@@ -20,6 +20,7 @@ We will simplify the paper to summarize the step by step workflow of a scientifi
 ## Tools 
 
 Here are the tools you could use to implement the principles above:
+
 - **Version Control**: Git 
 - **Workflow Automation**: Make and Docker
 - **Dependency Management**: Python virtual environment, R `renv` package
@@ -46,21 +47,21 @@ To make your workflow transferable across different machines, you can use cloud 
 
 Here is an example of a project structure:
 ```
-.
-|-- refs/
-|-- README.md
-|-- Makefile
-|-- data
-|   -- birds_count_table.csv
-|-- doc
-|   -- notebook.md
-|   -- manuscript.md
-|   -- changelog.txt
-|-- results
-|   -- summarized_results.csv
-|-- src
-|   -- sightings_analysis.py
-|   -- runall.py
+project/
+├── refs/
+├── README.md
+├── Makefile
+├── data/
+│   └── birds_count_table.csv
+├── doc/
+│   ├── notebook.md
+│   ├── manuscript.md
+│   └── changelog.txt
+├── results/
+│   └── summarized_results.csv
+└── src/
+    ├── sightings_analysis.py
+    └── runall.py
 ```
 
 1. **Create a Project Directory**:
@@ -96,28 +97,28 @@ Here is another example of project template for a paper project:
 
 ```
 paper/
-|-- analysis/
-|   |-- README.md
-|   |-- 00_clean_data.R
-|   |-- 01_fit_models.R
-|   |-- 02_make_figures.R
-|   |-- sandbox/
-|-- sim/
-|   |-- README.md
-|   |-- helper_functions.R
-|   |-- sim_script.R
-|   |-- run_sim_script.sh
-|   |-- sandbox/
-|-- figs/
-|-- notes/
-|-- ref_papers/
-|-- submitted/
-|-- revision/
-|-- final/
-|-- README.md
-|-- Makefile
-|-- my_paper.tex
-|-- my_refs.bib
+├── analysis/
+│   ├── README.md
+│   ├── 00_clean_data.R
+│   ├── 01_fit_models.R
+│   ├── 02_make_figures.R
+│   └── sandbox/
+├── sim/
+│   ├── README.md
+│   ├── helper_functions.R
+│   ├── sim_script.R
+│   ├── run_sim_script.sh
+│   └── sandbox/
+├── figs/
+├── notes/
+├── ref_papers/
+├── submitted/
+├── revision/
+├── final/
+├── README.md
+├── Makefile
+├── my_paper.tex
+└── my_refs.bib
 ```
 
 ## Data Management
