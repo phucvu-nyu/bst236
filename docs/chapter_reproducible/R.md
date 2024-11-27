@@ -1,9 +1,8 @@
-# R Package and Environment Management
+# R Version Control
 
 !!! abstract "Learning Objectives"
-    - Understand R package management and version control
-    - Learn to use renv for reproducible environments
-    - Master dependency documentation with DESCRIPTION files
+    - Learn to use `here` for consistent file paths
+    - Learn to use `renv` for reproducible environments
     - Develop best practices for R project management
 
 ## Why Package Management?
@@ -121,31 +120,6 @@ renv::snapshot()
 renv::restore()
 ```
 
-## Putting It All Together
-
-Here's a complete example of how to set up a new project:
-
-```r
-# 1. Create project structure
-dir.create("my_project")
-setwd("my_project")
-
-# 2. Create subdirectories
-dirs <- c("analysis", "raw_data", "data", "R", "figs", "sandbox", "ref_papers")
-sapply(dirs, dir.create)
-
-# 3. Initialize renv
-renv::init()
-
-# 4. Create initial R script
-cat('here::i_am("R/analysis.R")\n\n# Load data\ndata <- read.csv(here::here("data", "my_data.csv"))',
-    file = "R/analysis.R")
-
-# 5. Create README
-cat('# My Project\n\nDescription of project goes here.',
-    file = "README.md")
-```
-
 ## Recommended Workflow
 
 1. **Project Setup**:
@@ -231,29 +205,7 @@ renv::clean()
 renv::bundle()
 ```
 
-## Common Issues and Solutions
 
-1. **Package Version Conflicts**:
-```r
-# Check package versions
-renv::diagnostics()
-
-# Revert to previous state
-renv::revert()
-```
-
-2. **Missing Dependencies**:
-```r
-# Find and install missing packages
-renv::dependencies()
-renv::install()
-```
-
-3. **Broken Environment**:
-```r
-# Rebuild from scratch
-renv::init(force = TRUE)
-```
 
 ## Advanced Tips
 

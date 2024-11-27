@@ -1,8 +1,7 @@
 # Coding Principles
 
-!!! abstract "Learning Objectives"
 
-TBD
+
 
 ## Pivot your coding mindset
 
@@ -10,14 +9,10 @@ Here are the principles that you should pivot your coding mindset towards:
 
 1. Don't repeat yourself: Learning how to automate and/or simplify repetitive tasks in your workflow because the time savings will be enormous.
 2. Improve your coding style: Writing code that is more readable and maintainable before worrying about efficiency.
-3. Write code for readability: Writing code that is self-documenting and readable by others.
+3. Leverage AI tools: Using AI copilot and other AI assistants to help you write better code faster while still understanding what the code does.
    
 ## Advices for coders
 
-- [Understand code before relying on it.](#understand-code-before-relying-on-it)
-- [Don't repeat yourself](#dont-repeat-yourself)
-- [Think and document before you code](#think-and-document-before-you-code)
-- [Premature optimization is the root of all evil.](#premature-optimization-is-the-root-of-all-evil)
 
 
 ### **Understand code before relying on it.**
@@ -27,32 +22,35 @@ It's OK to __copy/paste code__ from Google or Stack Overflow. It's OK to ask AI 
 Here are some ways to understand code:
 * Run line by line and see what each does. 
 * Change the code and see if it behaves as expected.
-* Ask AI to explain the code.
+* Ask AI to explain the code with confidence level of 95% (please adjust the level based on your experience).
 
 
-If the code is implementing some statistical method, make sure you understand that method well enough to at least be able to accurately describe it in the methods section of a manuscript.
-
-* E.g., do you really know what `confint` does to a `glm` in `R`? 
 
 Here are some common pitfalls:
-- **Beware of the context.** What works in one context may not work in another. Reading other's solution to problems is how we learn a language. Just like a spoken language -- seeing how native speakers construct phrases is important! But we need to understand those phrases before we incorporate them into our dialect, lest we be misunderstood (or worse).
+- **Beware of the context.** What works in one context may not work in another. Reading other's solution but we need to understand those phrases before we incorporate them into our project. When using AI tools, also make sure you incorporate the enought context (the entire codebase, the API documentation, the method description document,etc.) into your project.
 - **AI hallucination.** AI is not always correct. In fact, it hallucinates a lot. So always try to verify the code.
 
+However, you cannot guarantee you understand every detail of the code (like how the hardware works behind the code). Everything is about balance. I want to share a quote:
 
+> Good artists copy, great artists steal.
+>
+> -- Pablo Picasso
 
+And please think about what does "steal" meant by Picasso.
 ### Don't repeat yourself
 
 Don't repeat yourself (DRY) is a fundamental concept in programming. 
 
 
+
 - **DRY in Workflow:** Learning how to automate and/or simplify repetitive tasks in your workflow because the time savings will be enormous. We will cover some tools to do this in this course, but you first need to be aware of the existence of these tools. 
   - Best practice: Optimize your workflow from time to time but not too often.
   - Shell Script: Process files in batches, customize your commands in the system.
-  - GNU Make: Create a `Makefile` to customize the project-specific build process.
+  - GNU Make: Create a `Makefile` to customize the project-specific build process. It is also a "cheat sheet" for common commands.
   - Transferable Workflows: Find the best practices making your workflow transferable across different platforms and machines.
-  - Keyboard shortcuts: Use your keyboard more and your mouse less. This can be through keyboard shortcuts, changing interfaces, &c.
+  - Keyboard shortcuts: Use your keyboard more and your mouse less. 
 - **DRY in Programming:** What if you need to change 1 thing? Needs to be changed in multiple places. Risk getting a wrong answer because we forgot to change one small thing.
-  - Functions: If you write the same code more than once, it should be a function.  For example, variables `score1=1`, `score2=2`, `score3=3` → `score=list(1,2,3)`. 
+
   - Write code __a bit more general__ than your data or specific task.
     * Don't assume particular dimensions.
     * Don't forget about missing values (even if *your* data have none).
@@ -61,6 +59,16 @@ Don't repeat yourself (DRY) is a fundamental concept in programming.
     * Don't assume particular file names.
     * Don't assume particular tuning parameters. 
     * Don't assume particular regression formulas.
+    * No magic numbers.
+      ``` r
+      get_bootstrap_ci <- function(..., nboot = 1e3)
+      ```
+      ``` python
+      def get_bootstrap_ci(..., nboot=1000):
+      ```
+  - Here are the tools to help you write more general code:
+    * Python configuration files .
+    * R `Renviron` file (See Workflow chapter).
 
 ### Think and document before you code
 
@@ -95,6 +103,8 @@ Here is an example of before your develop a package.
 ```
 This is copied from a local branch of `drtmle` R package from [David Benkeser](https://github.com/benkeser).
 
+This document can also be used as the part of prompt engineering to help generative AI tools to understand your goals and help you write the code in the right direction.
+
 Before you start coding, you can first "code" in natural language what you want to do.
 You can write in the document on:
 - The goal of the package
@@ -110,22 +120,32 @@ We call it "chain of thought" now in the context of using language models. We wi
 
 ### **Premature optimization is the root of all evil.**
 
+After reading all the advices above, you might be tempted to worry a lot before getting started with your coding. However, this will make me procrastinate and not get started forever. So how to balance?  My suggestion is to create a workflow template with all the best practices set up. Every time you start a new project, you just need to copy the template and modify it. This way you can focus on the content of your project and don't need to worry about the details of efficiency, reproducibility, etc. 
 
+Based on the workflow template you have set up, now we can talk about the "vomit coding".
+Here is the famous statement from [Kent Beck](https://en.wikipedia.org/wiki/Kent_Beck) for the order of importance of code:
 
-Get the code working and readable first, optimize and generalize later. 
+- Make It Work 
+- Make It Right 
+- Make It Fast
 
-Getting code **correct** AND **readable** is __most important__.
-* Make your code more efficient later.
-* After a paper is submitted for review?
+So what is the difference between "work" and "right"? Here's one [interpretation](https://wiki.c2.com/?MakeItWorkMakeItRightMakeItFast): First crank out code that handles one common case. Then fix all of the special cases, error handling, etc. so all tests pass.
 
 Remember: you don't get bonus points for code that "looks impressive".
 
-  In Donald Knuth's paper "Structured Programming With GoTo Statements", he wrote: "Programmers waste enormous amounts of time thinking about, or worrying about, the speed of noncritical parts of their programs, and these attempts at efficiency actually have a strong negative impact when debugging and maintenance are considered. We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%."
+  In Donald Knuth's paper "Structured Programming With GoTo Statements", he also wrote: "Programmers waste enormous amounts of time thinking about, or worrying about, the speed of noncritical parts of their programs, and these attempts at efficiency actually have a strong negative impact when debugging and maintenance are considered. We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%."
 
 
 
 
-This course will teach you a lot about how to make your code more efficient. However, do not get too obsessed with efficiency. 
+However, in this course, we will teach you a lot about how to make your code more efficient. Does that mean we violate the above principle? I want to answer this question by the another quote:
 
-Let me share a common misconception - the idea that using vectorized operations is always better than `for` loops. When I first started coding, I would tie myself in knots trying to avoid loops at all costs, believing this would make me look like a more sophisticated programmer.
-The reality is that premature optimization like this often leads to overly complex, hard-to-maintain code. I've learned that it's better to write straightforward code first, even if that means using loops, and then optimize later if profiling shows it's actually needed. Finding the right balance between readability and performance is a skill that develops with experience.
+> It took me four years to paint like Raphael, but a lifetime to paint like a child.
+>
+> -- Pablo Picasso
+
+
+
+
+
+Finding the right balance between readability and performance is a skill that develops with experience.

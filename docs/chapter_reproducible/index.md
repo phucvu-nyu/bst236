@@ -1,25 +1,21 @@
 # Overview
 
-Reproducible coding is fundamental to modern scientific computing and research. It ensures that:
+Design the best practices for workflows in scientific computing will make your research more efficient and reliable. We aim to design the workflow that is:
 
-1. **Verifiability**: Other researchers can verify and validate your results
-2. **Collaboration**: Team members can easily work together and build on each other's work
-3. **Maintainability**: Code remains functional and understandable over time
-4. **Efficiency**: Reduces time spent debugging and recreating environments
-5. **Research Integrity**: Supports transparent and reliable scientific findings
+1. **Reproducible**: Future you and other researchers can reproduce your results
+2. **Automated**: Reduces time spent on repetitive tasks
+3. **Maintainable**: Code remains functional and understandable over time
 
 This chapter covers essential tools and practices for reproducible research:
 
 ## Lectures
 
-- [Git](git.md): Version control for tracking changes and collaboration
-- [Make](make.md): Automation and documentation of workflows
-- [Virtual Environment](venv.md): Python environment and dependency management
-- [Reproducible R](R.md): R package and environment management
-- [Docker](docker.md): Complete environment containerization
+- [Scientific Computing Workflow](computing_workflow.md): Suggested workflows and project management strategies for scientific computing projects
+- [Git and GitHub](git.md): Version control for tracking changes, collaboration, and best practices in scientific computing
+- [Make](make.md): Automation and documentation of workflows, including dependency management and reproducibility
+- [Virtual Environment](venv.md): Python environment and dependency management for isolation and reproducibility
+- [Reproducible R](R.md): R package and environment management using `here` and `renv` for consistent file paths and reproducible environments
+- [Docker](docker.md): Complete environment containerization for cross-platform compatibility and system-level dependencies
 
-## Resources
 
-- [Software Carpentry](https://software-carpentry.org/)
-- [The Turing Way](https://the-turing-way.netlify.app/)
-- [Good Research Code Handbook](https://goodresearch.dev/)
+

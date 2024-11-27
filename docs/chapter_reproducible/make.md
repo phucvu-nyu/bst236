@@ -1,5 +1,4 @@
-# GNU Make for Scientific Workflows
-
+# GNU Make 
 !!! abstract "Learning Objectives"
     - Understand how Make can automate and document workflows
     - Learn Make syntax and basic concepts
@@ -11,7 +10,7 @@
 Make is a powerful tool for:
 
 1. **Automation**: Automate complex workflows with a single command
-2. **Documentation**: Self-documenting build process
+2. **Documentation**: Self-documenting build process; Makefiles are your cheat sheet
 3. **Dependency Management**: Only rebuild what's necessary
 4. **Reproducibility**: Ensure consistent builds across different environments
 

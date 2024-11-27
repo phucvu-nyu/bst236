@@ -1,12 +1,11 @@
 # Scientific Computing Workflow
 
-This lecture is based on the paper [Good Enough Practices for Scientific Computing](https://swcarpentry.github.io/good-enough-practices-in-scientific-computing/).
+The materials here are based on the paper [Good Enough Practices for Scientific Computing](https://swcarpentry.github.io/good-enough-practices-in-scientific-computing/).
 We will simplify the paper to summarize the step by step workflow of a scientific computing project. This is only a suggested workflow, you can customize it based on your needs.
 
 ## Basic principles
 
 * Put everything in one version-controlled directory.
-* Develop your own system. 
 * Be consistent, but look for ways to improve.
   * naming conventions, file structure, `make` structure
 * Raw data are sacred. Keep them separate from everything else. 
@@ -17,6 +16,13 @@ We will simplify the paper to summarize the step by step workflow of a scientifi
 * Use YYYY-MM-DD date formatting.
 * No absolute paths.
 * Use a package management system.
+
+## Tools 
+
+Here are the tools you could use to implement the principles above:
+- **Version Control**: Git 
+- **Workflow Automation**: Make and Docker
+- **Dependency Management**: Python virtual environment, R `renv` package
 
 
 ## Project Management

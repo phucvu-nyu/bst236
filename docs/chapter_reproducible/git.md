@@ -172,7 +172,6 @@ git restore --staged filename
 git reset --soft HEAD~1
 ```
 
-## Git for Scientific Computing
 
 ### .gitignore
 
@@ -198,12 +197,7 @@ results/
 .Rhistory
 ```
 
-### Version Control for Data Science
 
-1. **Code**: Version control all code
-2. **Data**: Store small data in repository, use data management systems for large data
-3. **Documentation**: Include README files and documentation
-4. **Dependencies**: Track environment and package versions
 
 ## Resources
 

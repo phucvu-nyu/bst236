@@ -23,7 +23,8 @@ We recommend using the AI assistant Github Copilot or other similar tools.
 If you are a student, you can apply for a free license of Github Copilot [here](https://github.com/features/copilot).
 
 To install Github Copilot in VS Code, you can search for `Github Copilot` in the VS Code extension marketplace and install it.
-Alternatively, you can refer to the [official tutorial](https://docs.github.com/en/copilot/quickstart).
+
+We also strongly recommend you to read the VS Code [tutorial](https://code.visualstudio.com/docs/copilot/overview) for Github Copilot. It introduces many useful features of Github Copilot.
 
 ### Cursor
 
@@ -70,6 +71,31 @@ You can download Cursor from the [official website](https://www.cursor.sh/) and 
    ```bash
    python --version  # Should show Python 3.10.0
    ```
+#### Jupyter Notebook
+
+To install Jupyter Notebook, follow these steps:
+
+1. Install Jupyter using pip:
+   ```bash
+   pip install notebook
+   ```
+
+2. Verify the installation:
+   ```bash 
+   jupyter notebook --version
+   ```
+
+3. Launch Jupyter Notebook:
+   ```bash
+   jupyter notebook
+   ```
+   This will open Jupyter Notebook in your default web browser.
+
+Check the VS Code tutorial for using Jupyter in VS Code [here](https://code.visualstudio.com/docs/python/jupyter-support-py).
+
+
+For more information, refer to the [official Jupyter documentation](https://jupyter.org/install).
+
 
 #### Conda
 
@@ -107,6 +133,14 @@ We also suggest installing mini-conda for data analysis projects. To install Min
    - A successful installation will display the conda version number.
 
 For more detailed information, refer to the [official Miniconda installation documentation](https://docs.anaconda.com/miniconda/install/). 
+
+#### VS Code Python
+
+
+We suggest you to read the [official tutorial](https://code.visualstudio.com/docs/python/python-tutorial) for using the Python extension in VS Code. Besides [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) extensions, we also suggest installing the following python related extensions:
+
+- [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance): it has the ability to supercharge your Python IntelliSense experience with rich type information, helping you write better code faster.
+- [Pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint): it is a static type checker and linting tool for Python.
 
 ### R 
 
@@ -171,18 +205,7 @@ To integrate radian with VS Code:
   - Search for `r.bracketedPaste` and ensure it's checked.
   - Search for `r.plot.useHttpgd` and enable it to use the httpgd plot viewer.
 
-**6. Verify the Setup**
 
-To confirm everything is set up correctly:
-
-- Open a new terminal in VS Code:
-  - Click on "Terminal" in the top menu and select "New Terminal."
-- Type `radian` and press Enter.
-- The radian console should start, displaying syntax highlighting and auto-completion features.
-
-You can now write and execute R code within VS Code using the radian console, benefiting from enhanced features like syntax highlighting and auto-completion.
-
-For a visual walkthrough, consider watching the following tutorial:
 
 # Cluster
 

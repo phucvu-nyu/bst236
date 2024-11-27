@@ -15,12 +15,19 @@ Whether you're taking your first steps into algorithms and data analysis, or you
 
 The main content of the book is shown in the figure below.
 
-- **Algorithms and Data Structures**: introduces core computational concepts, evaluates implementation tradeoffs on time and space complexities, examines performance characteristics, explores real-world use cases, outlines systematic approaches to problem decomposition, and provides practical exercises covering key algorithmic paradigms including sorting, dynamic programming, graph algorithms, and more.
+- **Workflow**: Covers principles of good coding, especially in efficiency, reproducibility, and AI copilot.  We cover Git and GitHub, Makefile, and virtual environments.
 
-- **Numerical Linear Algebra**: introduce algorithms for solving linear systems, eigenvalue problems, and more.
-- **Optimization**: introduce algorithms for solving optimization problems, including convex optimization, stochastic optimization, and more.
+- **Data Structures**: Focuses on Python data structures like lists, dictionaries, and deque, as well as Numpy arrays and Pandas DataFrames. 
+
+- **Algorithms**: Computation and memory complexity. We will cover recursion, backtracking, dynamic programming, and greedy algorithms.
+
+- **Numerical Linear Algebra**: Introduce the algorithms for linear algebra, including linear equations, eigenvectors, and more.
+
+- **Optimization**: Introduces algorithms for solving optimization problems, including convex optimization, stochastic optimization, and non-convex optimization.
+
 - **Deep Learning**: introduce the pytorch, deep learning architectures, including neural networks, transformers, and more.
-- **Reproducible Workflows**: How to make your workflow reproducible and efficient. We will use Git, virtual environments, styled coding, AI assisted coding, and more.
+
+
 
 ## Acknowledgements
 
