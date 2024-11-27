@@ -30,8 +30,8 @@ Class participation will be graded based on three parts:
 
 - Classroom discussions and questions asked in the courses.
 - The approved commits in the course project repository. 
-- Discussions and questions asked in the Canvas/Discussion  
-- One-minute summary on the Canvas. You need to summarize the content and confusions in each class, which is submitted via the canvas website, under the assignments. The summary just goes in the textbox once you begin the assignment. 
+- Discussions and questions asked in the Github Classroom.
+- One-minute summary on the Github Discussion. You need to summarize the content and confusions in each class, which is submitted via the Github Discussion. The summary just goes in the textbox once you begin the assignment. 
 
 Students are expected to behave professionally at all times, with courtesy towards other students, the TAs, and the instructor.  
 

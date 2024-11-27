@@ -76,7 +76,7 @@ git commit -m "Add bootstrap confidence intervals to regression analysis"
 ```bash
 ssh-keygen -t ed25519 -C "your.email@example.com"
 ```
-3. Add the public key to your GitHub account
+3. [Add the public key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 
 ### Basic GitHub Workflow
 

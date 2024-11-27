@@ -150,11 +150,13 @@ nav:
   - Chapter. Introduction:
     - chapter_preface/index.md
     - About this course: chapter_preface/about_the_course.md
-  - Chapter. Best Practices of Scientific Coding:
-    - Code style: chapter_coding/code_style.md
+  - Chapter. Principles of Scientific Coding:
+    - chapter_coding/index.md
+    - Principles: chapter_coding/code_principle.md
+    - Best practices: chapter_coding/computing_workflow.md
     - AI-assisted coding: chapter_coding/ai_copilot.md
-    - Reproducible coding: chapter_coding/reproducible.md
-  - Chapter. Reproducible Computing:
+  - Chapter. Reproducibility
+    - chapter_reproducible/index.md
     - Git: chapter_reproducible/git.md
     - Make: chapter_reproducible/make.md
     - Virtual Environment: chapter_reproducible/venv.md

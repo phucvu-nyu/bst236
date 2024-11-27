@@ -1,4 +1,15 @@
-# Installation
+# Installation Guide for Course
+
+!!! warning "Important"
+    Phil: Please edit the following content.
+
+
+
+
+
+## Operating System
+
+Most of the materials in this course are platform-independent. However, most of the instructions are based on Linux or macOS. If you are using Windows, you can either find the corresponding Windows instructions online or use WSL2 to set up a Linux virtual machine. See a tutorial [here](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 ## Install IDE
 
@@ -14,73 +25,167 @@ If you are a student, you can apply for a free license of Github Copilot [here](
 To install Github Copilot in VS Code, you can search for `Github Copilot` in the VS Code extension marketplace and install it.
 Alternatively, you can refer to the [official tutorial](https://docs.github.com/en/copilot/quickstart).
 
-## Cursor
+### Cursor
 
-Cursor is a new generation AI-powered IDE that can help you write code faster and more efficiently. 
+Cursor is a new generation AI-powered IDE that can help you write code faster and more efficiently. All the basic features of Cursor is same as VS Code. 
 You can download Cursor from the [official website](https://www.cursor.sh/) and install it. 
 
 ## Install language environments
 
-### Python environment
+### Python
 
-1. Install [Miniconda3](https://docs.conda.io/en/latest/miniconda.html) (Python 3.10+ required) by downloading and running the installer.
-2. Open VS Code, go to the Extensions marketplace, search for `python`, and install the Python Extension Pack.
-3. (Optional) Install the Black code formatter by running `pip install black` in your terminal.
+  We suggest using pyenv to install python for better version management. 
 
-### R/RStudio environment
+1. Install pyenv:
+   - On macOS: `brew install pyenv`
+   - On Linux: `curl https://pyenv.run | bash`
+   
 
-1. Download and install [R](https://cran.r-project.org/).
-2. In the VS Code extension marketplace, search for `R` and install the R Extension Pack.
-3. (Optional but recommended) Install additional packages for enhanced experience:
-   - Install `radian` for a modern R console with syntax highlighting and auto-completion
-   - Install `httpgd` package for interactive plot viewing
-4. More details can be found in the [official tutorial](https://code.visualstudio.com/docs/languages/r).
+2. Add pyenv to your shell configuration:
+   - For bash, add to `~/.bashrc`:
+     ```bash
+     export PYENV_ROOT="$HOME/.pyenv"
+     export PATH="$PYENV_ROOT/bin:$PATH"
+     eval "$(pyenv init -)"
+     ```
+   - For zsh, add to `~/.zshrc`:
+     ```bash
+     export PYENV_ROOT="$HOME/.pyenv"
+     export PATH="$PYENV_ROOT/bin:$PATH"
+     eval "$(pyenv init -)"
+     ```
+   - Source the file to apply the changes:
+     ```bash
+     source ~/.bashrc  # For bash
+     source ~/.zshrc   # For zsh
+     ```
 
-### C/C++ environment
+3. Install Python using pyenv:
+   ```bash
+   pyenv install 3.10.0  # Install Python 3.10.0
+   pyenv global 3.10.0   # Set as default Python version
+   ```
 
-1. Windows systems need to install [MinGW](https://sourceforge.net/projects/mingw-w64/files/) ([Configuration tutorial](https://blog.csdn.net/qq_33698226/article/details/129031241)); MacOS comes with Clang, so no installation is necessary.
-2. In the VS Code extension marketplace, search for `c++` and install the C/C++ Extension Pack.
-3. (Optional) Open the Settings page, search for the `Clang_format_fallback Style` code formatting option, and set it to `{ BasedOnStyle: Microsoft, BreakBeforeBraces: Attach }`.
+4. Verify the installation:
+   ```bash
+   python --version  # Should show Python 3.10.0
+   ```
 
-### Java environment
+#### Conda
 
-1. Download and install [OpenJDK](https://jdk.java.net/18/) (version must be > JDK 9).
-2. In the VS Code extension marketplace, search for `java` and install the Extension Pack for Java.
-<!-- 
-### C# environment
+We also suggest installing mini-conda for data analysis projects. To install Miniconda on macOS, follow these steps:
 
-1. Download and install [.Net 8.0](https://dotnet.microsoft.com/en-us/download).
-2. In the VS Code extension marketplace, search for `C# Dev Kit` and install the C# Dev Kit ([Configuration tutorial](https://code.visualstudio.com/docs/csharp/get-started)).
-3. You can also use Visual Studio ([Installation tutorial](https://learn.microsoft.com/zh-cn/visualstudio/install/install-visual-studio?view=vs-2022)).
+1. **Download the Miniconda Installer:**
+   - Visit the [Miniconda download page](https://docs.conda.io/en/latest/miniconda.html).
+   - Choose the installer that matches your macOS architecture:
+     - For Apple Silicon (M1, M2, etc.): Select the "Miniconda3 macOS Apple M1 64-bit pkg" installer.
+     - For Intel-based Macs: Select the "Miniconda3 macOS Intel x86 64-bit pkg" installer.
 
-### Go environment
+2. **Install Miniconda:**
+   - Locate the downloaded `.pkg` file in your `Downloads` folder.
+   - Double-click the installer to launch it.
+   - Follow the on-screen instructions:
+     - Read and agree to the license agreement.
+     - Choose the installation type:
+       - **Install for all users of this computer (Recommended):** Installs Miniconda into `/opt/miniconda3` for all users.
+       - **Install just for me:** Installs Miniconda into your home directory.
+     - Click "Install" to proceed.
 
-1. Download and install [go](https://go.dev/dl/).
-2. In the VS Code extension marketplace, search for `go` and install Go.
-3. Press `Ctrl + Shift + P` to call up the command bar, enter go, choose `Go: Install/Update Tools`, select all and install.
+3. **Initialize Miniconda:**
+   - After installation, open the Terminal application.
+   - Run the following command to initialize conda:
+     ```bash
+     conda init
+     ```
+   - Close and reopen the Terminal to apply the changes.
 
-### Swift environment
+4. **Verify the Installation:**
+   - In the Terminal, check the conda version by running:
+     ```bash
+     conda --version
+     ```
+   - A successful installation will display the conda version number.
 
-1. Download and install [Swift](https://www.swift.org/download/).
-2. In the VS Code extension marketplace, search for `swift` and install [Swift for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang).
+For more detailed information, refer to the [official Miniconda installation documentation](https://docs.anaconda.com/miniconda/install/). 
 
-### JavaScript environment
+### R 
 
-1. Download and install [Node.js](https://nodejs.org/en/).
-2. (Optional) In the VS Code extension marketplace, search for `Prettier` and install the code formatting tool.
+You can use other R IDEs like RStudio, but we suggest using VS Code with the R extension to better integrate with AI copilot. You can find the tutorial of VS Code R extension [here](https://code.visualstudio.com/docs/languages/r).
+To set up R in Visual Studio Code, follow these steps:
 
-### TypeScript environment
+**1. Install R**
 
-1. Follow the same installation steps as the JavaScript environment.
-2. Install [TypeScript Execute (tsx)](https://github.com/privatenumber/tsx?tab=readme-ov-file#global-installation).
-3. In the VS Code extension marketplace, search for `typescript` and install [Pretty TypeScript Errors](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors).
+Ensure that R (version 3.4.0 or higher) is installed on your system:
 
-### Dart environment
+- **macOS**: Download the installer from [CRAN](https://cran.r-project.org/bin/macosx/) and follow the installation prompts.
+- **Linux**: Use your package manager to install R. For example, on Ubuntu:
 
-1. Download and install [Dart](https://dart.dev/get-dart).
-2. In the VS Code extension marketplace, search for `dart` and install [Dart](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code).
+  ```bash
+  sudo apt-get update
+  sudo apt-get install r-base
+  ```
 
-### Rust environment
 
-1. Download and install [Rust](https://www.rust-lang.org/tools/install).
-2. In the VS Code extension marketplace, search for `rust` and install [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer). -->
+
+
+
+**2. Install radian**
+
+With Python installed, install radian using pip:
+
+```bash
+pip install -U radian
+```
+
+This command installs radian globally.
+
+**3. Install Required R Packages**
+
+Open your R console and install the following packages:
+
+```r
+install.packages("languageserver")
+install.packages("httpgd")
+```
+
+- `languageserver`: Provides language support for R in VS Code.
+- `httpgd`: Enables an interactive plot viewer in VS Code.
+
+**4. Install the R Extension in VS Code**
+
+In VS Code:
+
+- Click on the Extensions view icon on the Sidebar or press `Ctrl+Shift+X`.
+- Search for "R" and install the extension by Yuki Ueda.
+
+**5. Configure VS Code Settings**
+
+To integrate radian with VS Code:
+
+- Open VS Code settings:
+  - Click on the gear icon in the lower-left corner and select "Settings," or press `Ctrl+,`.
+- In the search bar, type `r.rterm`.
+- Set the path to radian:
+  - **macOS/Linux**: Set `r.rterm.mac` or `r.rterm.linux` to the output of `which radian` (e.g., `/usr/local/bin/radian`).
+- Enable bracketed paste mode:
+  - Search for `r.bracketedPaste` and ensure it's checked.
+  - Search for `r.plot.useHttpgd` and enable it to use the httpgd plot viewer.
+
+**6. Verify the Setup**
+
+To confirm everything is set up correctly:
+
+- Open a new terminal in VS Code:
+  - Click on "Terminal" in the top menu and select "New Terminal."
+- Type `radian` and press Enter.
+- The radian console should start, displaying syntax highlighting and auto-completion features.
+
+You can now write and execute R code within VS Code using the radian console, benefiting from enhanced features like syntax highlighting and auto-completion.
+
+For a visual walkthrough, consider watching the following tutorial:
+
+# Cluster
+
+The cluster computing of the class is supported by Harvard Academic Technologies Group similar to the [FAS-RC cluster](https://rc.fas.harvard.edu/). Check the Academic Technologies Group [official website](https://atg.fas.harvard.edu/) for more information.
+
+

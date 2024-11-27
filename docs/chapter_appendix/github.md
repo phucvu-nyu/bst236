@@ -1,6 +1,8 @@
-# Github Classroom 🏗️
+# Github Classroom 
 
-<!-- Phil: Test and revise the following content. Especially for homework pull and push. -->
+!!! warning "Important"
+    Phil: Please edit the following content based on our github classroom setup.
+
 
 ## What is Git?
 Git is a powerful tool that helps developers track and manage changes to their code over time. Think of it like a time machine for your code - it keeps track of every version of your files, allowing you to see what changed, when it changed, and who changed it.
