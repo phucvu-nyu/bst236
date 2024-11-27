@@ -2,7 +2,6 @@
 
 We welcome any contributions to improve the quality of the course. If you discover any typos, broken links, missing content, textual ambiguities, unclear explanations, or unreasonable text structures, please assist us in making corrections to provide readers with better quality learning resources.
 
-The GitHub IDs of all [contributors] will be displayed on the repository to thank them for their selfless contributions to the open-source community.
 
 ### Content fine-tuning
 

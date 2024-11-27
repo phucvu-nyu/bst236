@@ -155,7 +155,7 @@ nav:
     - Principles: chapter_coding/code_principle.md
     - Best practices: chapter_coding/computing_workflow.md
     - AI-assisted coding: chapter_coding/ai_copilot.md
-  - Chapter. Reproducibility
+  - Chapter. Reproducibility:
     - chapter_reproducible/index.md
     - Git: chapter_reproducible/git.md
     - Make: chapter_reproducible/make.md
@@ -174,12 +174,12 @@ nav:
     - Sorting algorithms: chapter_sorting/sorting_algorithm.md
     - Insertion sort: chapter_sorting/insertion_sort.md
     - Merge sort: chapter_sorting/merge_sort.md
-    #- Selection sort
-    #- Bubble sort
-    #- Quick sort
-    #- Heap sort
-    #- Bucket sort
-    #- Counting sort
+    # - Selection sort
+    # - Bubble sort
+    # - Quick sort
+    # - Heap sort
+    # - Bucket sort
+    # - Counting sort
     - Summary: chapter_sorting/summary.md
   # - Chapter. Dynamic programming:
   #   - chapter_dynamic_programming/index.md
@@ -195,6 +195,6 @@ nav:
     - Installation: chapter_appendix/installation.md
     - Github Classroom: chapter_appendix/github.md
     - Contributing: chapter_appendix/contribution.md
-    #- Terminology: chapter_appendix/terminology.md
+    # - Terminology: chapter_appendix/terminology.md
   - References:
     - chapter_reference/index.md
