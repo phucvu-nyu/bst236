@@ -68,4 +68,4 @@ Beside Github Copilot, there are many other AI coding tools out there. One of th
 | **Learning Curve** | Moderate (more suited for advanced users)                                  | Low (easy for both beginners and experienced users)                 |
 | **Privacy & Security** | Strong control over data, ideal for sensitive projects.                   | Relies on public code, some IP concerns for sensitive projects.     |
 | **Cost Efficiency** | Better for long-term, complex projects.                                     | More affordable for small, short-term projects.                     |
-| **Price**          | Free tier available<br>$12/month for Pro Plan<br>$40/month for Business Plan<br>30-day free trial | Free for education accounts<br>$10/month for Copilot Individual<br>$19/month for Copilot Business<br>$39/month for Copilot Enterprise |
+| **Price**          | Free tier available<br> $12/month for Pro Plan<br> $40/month for Business Plan<br> 30-day free trial | Free for education accounts<br>$10/month for Copilot Individual<br>$19/month for Copilot Business<br>$39/month for Copilot Enterprise |

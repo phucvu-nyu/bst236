@@ -163,6 +163,16 @@ nav:
     - Virtual Environment: chapter_workflow/venv.md
     - Reproducible R: chapter_workflow/R.md
     - Docker: chapter_workflow/docker.md
+  - Chapter. Data Structures:
+    - chapter_data_structures/index.md
+    - Lists: chapter_data_structures/list.md
+    - Stack: chapter_data_structures/stack.md
+    - Queue: chapter_data_structures/queue.md
+    - Hash Map: chapter_data_structures/hash_map.md
+    - NumPy Arrays: chapter_data_structures/numpy_array.md
+    - Pandas DataFrame: chapter_data_structures/pandas_dataframe.md
+    - Polars: chapter_data_structures/polars.md
+    - Multiprocessing: chapter_data_structures/multiprocess.md
   - Chapter. Complexity analysis:
     - chapter_computational_complexity/index.md
     - Algorithm efficiency assessment: chapter_computational_complexity/performance_evaluation.md
