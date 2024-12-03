@@ -14,7 +14,7 @@ my_list = [0] * 10
 ```
 
 
-The `append()` method adds a single element to the end of the list:
+**Insert**: The `append()` method adds a single element to the end of the list:
 
 ```python
 my_list.append(6)
@@ -24,11 +24,16 @@ print("After append:", my_list)
 
 
 
-The `index()` method returns the index of the first occurrence of a specified element:
+**Search**: The `index()` method returns the index of the first occurrence of a specified element:
 
 ```python
 print("Index of element 5:", my_list.index(5))
 # Result: 4
+```
+
+**Delete**: The `del` statement removes an element from the list by its index:
+```python
+del my_list[0]
 ```
 
 ## List Slicing

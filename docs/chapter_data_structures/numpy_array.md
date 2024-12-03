@@ -6,7 +6,7 @@ NumPy is a powerful library for numerical computing in Python. It provides suppo
 
 ![NumPy array](numpy.assets/numpy_array.png)
 
-### Creating and Manipulating Arrays
+**Create and manipulate**: 
 
 ```python
 import numpy as np
@@ -17,12 +17,35 @@ np_array = np.array([1, 2, 3, 4, 5])
 # Array Operations
 squared_array = np_array ** 2  # Element-wise squaring
 mean_value = np_array.mean()   # Calculate mean
+```
 
+**Insert**: Concatenate two arrays:
+
+```python
+# Insert at the end
+np.concatenate([np_array, [10, 20]])
+```
+
+**Search**: The `where()` method returns the index of the first occurrence of a specified element:
+
+```python
+even_indices = np.where(np_array % 2 == 0)
+# Find unique elements
+unique_elements = np.unique(np_array)
+# Boolean masking
+mask = np_array > 3
+filtered_arr = np_array[mask]
+```
+
+**Delete**: The `delete()` method removes an element from the array by its index:
+
+```python
+np.delete(np_array, [1, 2])
 # Filtering Arrays
 even_numbers = np_array[np_array % 2 == 0]
 ```
 
-### Array Slicing Techniques
+### Slicing
 
 NumPy provides powerful slicing capabilities:
 
@@ -63,12 +86,12 @@ normalized_x = x - np.mean(x, axis=0)
 
 ## Key Performance Insights
 
-- Use Lists for:
+**Use Lists for**:
   - General-purpose programming
   - Small datasets
   - Mixed data types
 
-- Use NumPy Arrays for:
+**Use NumPy Arrays for**:
   - Scientific computing
   - Vectorized operations
   - Large numerical computations

@@ -19,7 +19,22 @@ column_a = df['A'].values
 column_means = df.mean()
 ```
 
-### DataFrame Slicing and Filtering
+**Search**: 
+```python
+# Find index of specific value
+index_of_value = df[df['A'] == 3].index[0]
+# Find rows meeting a condition
+filtered_rows = df[df['A'] > 3]
+```
+
+**Delete**: The `drop()` method removes rows or columns from the DataFrame:
+
+```python
+df.drop(columns=['A']) # Drop column A
+df_dropped = df.drop([0, 2])  # Drop rows at index 0 and 2
+```
+
+### Slicing 
 
 ```python
 # Create Sample DataFrame
