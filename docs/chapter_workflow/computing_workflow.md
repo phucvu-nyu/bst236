@@ -164,16 +164,16 @@ Here is the guideline for data management:
 ## Collaboration
 
 1. **Talk to your collaborators**:
-   - Not everyone is comfortable with LaTeX or git or what we have learned in this course. So build an automated pipleline to generate other types of files, e.g., use `pandoc` to generate `docx` from `tex`.
-   - Address organization from the outset.
-   - Only have single master version online. Every collaborator's edit should be easily synchronized. Ideally, bring people on board to your (version controlled, reproducible) system. But try to design your project template robust for different systems. For example, if the master version is on overleaf, then design workflow compatible for all overleaf, dropbox, and git synchronization.
-   - Make explicit decisions about how project members will communicate.
+      - Not everyone is comfortable with LaTeX or git or what we have learned in this course. So build an automated pipleline to generate other types of files, e.g., use `pandoc` to generate `docx` from `tex`.
+      - Address organization from the outset.
+      - Only have single master version online. Every collaborator's edit should be easily synchronized. Ideally, bring people on board to your (version controlled, reproducible) system. But try to design your project template robust for different systems. For example, if the master version is on overleaf, then design workflow compatible for all overleaf, dropbox, and git synchronization.
+      - Make explicit decisions about how project members will communicate.
 2. **Create an Overview of Your Project**
-   - Have a `README` file in the project's home directory that explains the purpose of the project.
-     - Include the project's title, a brief description, up-to-date contact information, and examples of how to run various tasks.
-   - Include a `CONTRIBUTING` file that describes how to get the project running, use it, or contribute to it, including dependencies and tests.
+      - Have a `README` file in the project's home directory that explains the purpose of the project.
+      - Include the project's title, a brief description, up-to-date contact information, and examples of how to run various tasks.
+      - Include a `CONTRIBUTING` file that describes how to get the project running, use it, or contribute to it, including dependencies and tests.
 3. **Create a Shared Document to Track Progress**
-   - Maintain a plain text file like `log.md` or use project management platforms like [Trello](https://trello.com/) to create issues for each task.
-   - Clearly describe tasks to make them understandable for newcomers.
-   - Write the document, so we can backtrack of the progress of the project and how the project evolved.
+      - Maintain a plain text file like `log.md` or use project management platforms like [Trello](https://trello.com/) to create issues for each task.
+      - Clearly describe tasks to make them understandable for newcomers.
+      - Write the document, so we can backtrack of the progress of the project and how the project evolved.
 
