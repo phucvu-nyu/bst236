@@ -178,18 +178,6 @@ nav:
     - Iteration and recursion: chapter_computational_complexity/iteration_and_recursion.md
     - Time complexity: chapter_computational_complexity/time_complexity.md
     - Space complexity: chapter_computational_complexity/space_complexity.md
-  - Chapter. Sorting:
-    - chapter_sorting/index.md
-    - Sorting algorithms: chapter_sorting/sorting_algorithm.md
-    - Insertion sort: chapter_sorting/insertion_sort.md
-    - Merge sort: chapter_sorting/merge_sort.md
-    # - Selection sort
-    # - Bubble sort
-    # - Quick sort
-    # - Heap sort
-    # - Bucket sort
-    # - Counting sort
-    - Summary: chapter_sorting/summary.md
   # - Chapter. Dynamic programming:
   #   - chapter_dynamic_programming/index.md
   #   - Introduction to dynamic programming: chapter_dynamic_programming/intro_to_dynamic_programming.md

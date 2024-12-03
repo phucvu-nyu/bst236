@@ -1,4 +1,4 @@
-## Pandas DataFrame
+# Pandas DataFrame
 
 Pandas is a powerful library for data manipulation and analysis. It provides data structures and operations for manipulating numerical tables and time series.
 
