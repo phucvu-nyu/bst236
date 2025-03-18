@@ -1,11 +1,13 @@
-# BST 236 Computing I
+# GitHub Tutorial - Phuc Vu
 
-![Turing](./assets/covers/chapter_welcome_turing.jpg)
+![Turing](./assets/covers/git.jpg)
 
-Welcome to BST236! I am excited to welcome you. This course aims to create a beginner-friendly course on statistical computing. I hope to prepare you for all what you need for the basic computational skills for data science. 
+This website contains details on how to set up VSCode, Git on your computer and give examples on basic commands in Git. 
 
-One unique feature of the course is the integration of generative AI technologies. The way of coding in the era of AI has been revolutionized. 
-I aim to teach you all aspects of statistical computing seamlessly integrated with AI copilot. You will not only learn various cool algorithms but also the workflow of efficient and reproducible programming. Let's dive into an exciting semester of learning and discovery!
+# Acknowledgement
+I mainly used material from the two courses <br>
+- BST236 Computing I taught by Professor Junwei Lu, Department of Biostatistics, Harvard T.H. Chan School of Public Health [website](https://junwei-lu.github.io/bst236/) <br>
+- BST 260 Introduction to Data Science for this website taught by Professor Rafael A.Irrizary Department of Biostatistics, Harvard T.H. Chan School of Public Health [website](https://datasciencelabs.github.io/2024/) <br>
 
 
 [Dive in](chapter_syllabus/)

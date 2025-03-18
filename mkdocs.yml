@@ -1,16 +1,13 @@
 # Project information
-site_name: BST236 Computing
+site_name: Github Tutorial
 site_url: https://phucvu-nyu.github.io/bst236/
-site_description: "BST236 Computing"
+site_description: "Github Tutorial"
 docs_dir: build/docs
 site_dir: site
 # Repository
 edit_uri: tree/main/docs
-version: 1.0.0
+#version: 1.0.0
 
-
-# Copyright
-copyright: Junwei Lu, Department of Biostatistics, Harvard T.H. Chan School of Public Health.
 
 # Configuration
 theme:
@@ -71,11 +68,7 @@ extra:
       #lang: en
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/junwei-lu/
-    #  - icon: fontawesome/brands/x-twitter
-    #   link: https://twitter.com/
-    - icon: fontawesome/solid/code
-      link: https://junwei-lu.github.io/
+      link: https://github.com/phucvu-nyu
   generator: false
   #status:
   #  new: 
@@ -145,19 +138,8 @@ extra_css:
 
 # Page tree
 nav:
-  - Course Information:
-    - chapter_syllabus/index.md
-  - Chapter 0. Introduction:
+  - Page Introduction:
     - chapter_preface/index.md
-  - Chapter 1. Basics of Coding:
-    - chapter_coding/index.md
-    - Principles: chapter_coding/code_principle.md
-    - Code in Style: chapter_coding/coding_style.md
-  - Chapter 2. Coding with AI:
-    - chapter_ai/index.md
-    - AI Copilot: chapter_ai/ai_copilot.md
-    - Prompt Engineering: chapter_ai/prompt_engineering.md
-    - AI Tools: chapter_ai/ai_tools.md
   - Chapter 3. Computing Workflow:
     - chapter_workflow/index.md
     - Workflow: chapter_workflow/computing_workflow.md
@@ -166,49 +148,6 @@ nav:
     - Virtual Environment: chapter_workflow/venv.md
     - Reproducible R: chapter_workflow/R.md
     - Docker: chapter_workflow/docker.md
-  - Chapter 4. Complexity analysis:
-    - chapter_computational_complexity/index.md
-    #- Iteration and recursion: chapter_computational_complexity/iteration_and_recursion.md
-    - Time complexity: chapter_computational_complexity/time_complexity.md
-    - Space complexity: chapter_computational_complexity/space_complexity.md
-  - Chapter 5. Data Structures:
-    - chapter_data_structures/index.md
-    - Lists: chapter_data_structures/list.md
-    - Stack: chapter_data_structures/stack.md
-    - Queue: chapter_data_structures/queue.md
-    - Hash Table: chapter_data_structures/hash_map.md
-    - NumPy Arrays: chapter_data_structures/numpy_array.md
-    - Pandas DataFrame: chapter_data_structures/pandas_dataframe.md
-    - Polars: chapter_data_structures/polars.md
-    - Multiprocessing: chapter_data_structures/multiprocess.md
-  - Chapter 6. Discrete Algorithms:
-    - chapter_algorithms/index.md
-    - Depth-first Search: chapter_algorithms/climb_stairs.md
-    - Divide and Conquer: chapter_algorithms/divide_n_conquer.md
-    - Breadth-first Search: chapter_algorithms/bfs.md
-    - Dynamic Programming: chapter_algorithms/dynamic_programming.md
-    - Summary: chapter_algorithms/summary.md
-  - Chapter 7. Numerical Linear Algebra:
-    - chapter_linear_algebra/index.md
-    - Linear Algebra Basics: chapter_linear_algebra/basic_linear_algebra.md
-    - Numerical Criteria: chapter_linear_algebra/numerical_criteria.md
-    - Linear Equations: chapter_linear_algebra/linear_equation.md
-    - Eigen-Decomposition: chapter_linear_algebra/eigen.md
-    - Sparse Matrices: chapter_linear_algebra/sparse_matrix.md
-    - Randomized Methods: chapter_linear_algebra/stochastic_matrix.md
-    - GPU for Matrices: chapter_linear_algebra/gpu_matrix.md
-  - Chapter 8. Optimization:
-    - chapter_optimization/index.md
-    - Convexity: chapter_optimization/convexity.md
-    - Rate of Convergence: chapter_optimization/rate_of_convergence.md
-    - PyTorch Basics: chapter_optimization/pytorch_basics.md
-    - Gradient Descent: chapter_optimization/gradient_descent.md
-    - Accelerated Gradient Descent: chapter_optimization/agd.md
-    - Proximal Gradient Descent: chapter_optimization/proximal_gradient_descent.md
-    - Mirror Descent: chapter_optimization/mirror_descent.md
-    - Nesterov's Smooth Method: chapter_optimization/nesterov_smooth.md
-    - Duality and ADMM: chapter_optimization/duality_and_admm.md
-    - Stochastic Gradient Descent: chapter_optimization/sgd.md
   - Appendix:
     - chapter_appendix/index.md
     - Installation: chapter_appendix/installation.md
@@ -216,6 +155,4 @@ nav:
     - Class Cluster: chapter_appendix/cluster.md
     - Python 101: chapter_appendix/python_intro.md
     - Contributing: chapter_appendix/contribution.md
-    # - Terminology: chapter_appendix/terminology.md
-  - References:
-    - chapter_reference/index.md
+
