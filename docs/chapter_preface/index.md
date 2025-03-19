@@ -11,15 +11,12 @@ Anyone who is interested in learning about git and using it to store your projec
 
 The main contents of the page are listed below
 
-- **Introduction**: What is GitHub and Git?
-
-- **Set up Git**: How to download Git to your computer and connect to your Github account
-
-- **Program and IDE installation**: Set up Python + VSCode or R + Rstudio
+- **Introduction and Setup**: What is GitHub and Git? How to download Git to your computer? How to download Python + VSCode or R + Rstudio
 
 - **Basic Linux**: Introduce working directory, relative pathway, and basic linux commands
 
-- **Basic Git**: Introduces structure in Git and basic git commands
+- **Set up Git**: Link your Git to your GitHub account
+- **Basic Git commands**: Introduces structure in Git and basic git commands
 - **Common project structures and good practices**: 
 - **Make a quick personal website**: Use online available format to make you a website
 

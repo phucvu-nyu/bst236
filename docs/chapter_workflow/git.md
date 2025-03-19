@@ -1,21 +1,59 @@
-# Git and GitHub
-
-!!! abstract "Learning Objectives"
-    - Understand why version control is essential for reproducible research
-    - Learn basic Git commands and workflows
-    - Learn how to collaborate using GitHub
-    - Develop best practices for version control in scientific computing
-
-## Why Version Control?
+## First, let's talk about version control
 
 Version control is essential for:
 
-1. **Tracking Changes**: Keep a complete history of your project
+1. **Tracking Changes**: Keep a COMPLETE history of your project
 2. **Collaboration**: Work effectively with others
-3. **Backup**: Never lose your work
-4. **Reproducibility**: Return to any previous state of your project
-5. **Documentation**: Understand why changes were made
+3. **Backup and Reproducibility**: Go back to any previous state of your project
+4. **Documentation**: Document changes and their reasons
 
+## Let install Git
+
+### MacOS User
+
+1. Open your terminal (Command+space, then search for terminal)
+2. You may already have git preinstalled, please run 
+```bash
+git --version
+```
+ to verify. If it return a version, then you are good to go. If not please continue.
+3. Copy and paste the following into the terminal, then hit return(enter)
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+4. Brew will then gives instructions for you to run 3 lines in the terminal. Run it! Below is an example but my 3 lines will be different from yours
+![git1](./git.assets/brew.jpg)
+
+5. Use brew to install git by running in the terminal
+
+```bash
+brew install git
+```
+
+6. Test if your git is ready
+```bash
+git --version
+```
+
+### Window User
+1. Test if git is installed by first open your Command Prompt (from the search bar)
+
+2. Run
+```bash
+git --version
+```
+to verify. If it return a version, then you are good to go. If not please continue.
+
+3. Go to [Git for Windows](https://git-scm.com/downloads/win) and click download (in the picture below)
+![git1](./git.assets/window_git_1.jpg)
+
+4. Install the git by click into the downloaded file, then a bunch of "Next","Install", and "Finish"
+
+5. Test if git is successfully installed by close and reopen Command Prompt. Then run
+```bash
+git --version
+```
 ## Git Basics
 
 If you are using VS Code, you can check the tutorial [here](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git).
@@ -24,10 +62,14 @@ If you are using VS Code, you can check the tutorial [here](https://code.visuals
 
 First time setup:
 ```bash
-git config --global user.name "Your Name"
+git config --global user.name "Your GitHub Name"
 git config --global user.email "your.email@example.com"
 ```
-
+For example, my github account is githubnyu and its email is phucvu7139@gmail.com, so I run:
+```bash
+git config --global user.name "githubnyu"
+git config --global user.email "phucvu7139@gmail.com"
+```
 Initialize a repository only when you create a project
 ```bash
 git init 

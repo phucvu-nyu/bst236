@@ -8,11 +8,8 @@
 ## Contents
 
 - [GitHub](GitHub.md): What's GitHub? How to register an account and make a repository
-- [Git and GitHub](git.md): Version control for tracking changes, collaboration, and best practices in scientific computing
-- [Make](make.md): Automation and documentation of workflows, including dependency management and reproducibility
-- [Virtual Environment](venv.md): Python environment and dependency management for isolation and reproducibility
-- [Reproducible R](R.md): R package and environment management using `here` and `renv` for consistent file paths and reproducible environments
-- [Docker](docker.md): Complete environment containerization for cross-platform compatibility and system-level dependencies
+- [Git and GitHub](git.md): What's Git and how to download it to your computer
+
 
 
 

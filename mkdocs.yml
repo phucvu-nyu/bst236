@@ -143,7 +143,7 @@ nav:
   - Chapter 1. Introduction:
     - chapter_workflow/index.md
     - GitHub: chapter_workflow/GitHub.md
-    - Git and GitHub: chapter_workflow/git.md
+    - Git: chapter_workflow/git.md
     - Make: chapter_workflow/make.md
     - Virtual Environment: chapter_workflow/venv.md
     - Reproducible R: chapter_workflow/R.md
