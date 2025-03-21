@@ -6,9 +6,9 @@
 
 - A place where you upload your projects so other people can see and use your codes.
 
-# Register a GitHub account
 
-You can register an account [here](https://github.com/signup)
+
+
 
 # GitHub repositories
 

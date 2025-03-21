@@ -140,6 +140,10 @@ extra_css:
 nav:
   - Page Introduction:
     - chapter_preface/index.md
+  - Installation and Setup:
+    - chapter_appendix/index.md
+    - Installation: chapter_appendix/installation.md
+    - Github and Git: chapter_appendix/github.md
   - Chapter 1. GitHub and Git Introduction:
     - chapter_workflow/index.md
     - GitHub: chapter_workflow/GitHub.md
@@ -148,11 +152,5 @@ nav:
     - Virtual Environment: chapter_workflow/venv.md
     - Reproducible R: chapter_workflow/R.md
     - Docker: chapter_workflow/docker.md
-  - Appendix:
-    - chapter_appendix/index.md
-    - Installation: chapter_appendix/installation.md
-    - Github Classroom: chapter_appendix/github.md
-    - Class Cluster: chapter_appendix/cluster.md
-    - Python 101: chapter_appendix/python_intro.md
-    - Contributing: chapter_appendix/contribution.md
+
 
