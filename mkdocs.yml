@@ -140,7 +140,7 @@ extra_css:
 nav:
   - Page Introduction:
     - chapter_preface/index.md
-  - Chapter 1. Introduction:
+  - Chapter 1. GitHub and Git Introduction:
     - chapter_workflow/index.md
     - GitHub: chapter_workflow/GitHub.md
     - Git: chapter_workflow/git.md

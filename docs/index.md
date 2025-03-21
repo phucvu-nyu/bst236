@@ -10,4 +10,4 @@ I mainly used material from the two courses <br>
 - BST 260 Introduction to Data Science for this website taught by Professor Rafael A.Irrizary Department of Biostatistics, Harvard T.H. Chan School of Public Health [website](https://datasciencelabs.github.io/2024/) <br>
 
 
-[Dive in](chapter_syllabus/)
+[Dive in](chapter_preface/)
