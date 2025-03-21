@@ -1,50 +1,49 @@
-# Github Classroom 
+# Setup GitHub and Git
+## Create a GitHub account
 
-## Github 
+You can register an account [here](https://github.com/signup)
 
-Each student should create Github account if you don't already have one. Be sure to include your Harvard email as one of the emails associated with the account, as this will give us access to additional features such as GitHub Copilot
+## Installing Git
 
-
-One option to avoid inputting your username and password when pushing to a private repository is to use SSH keys. If you've previously set up SSH keys for Github, you can reuse them by copying your existing key pair to the `~/.ssh` directory. Otherwise, you'll need to generate new SSH keys by following these steps:
-
-1. Launch your terminal
-2. Run `ssh-keygen -t rsa` and follow the instructions
-3. You have now created your ssh keys in the directory `~/.ssh`
-4. Run `cat .ssh/id_rsa.pub` to display your public key
-5. Copy your public key and enter it into Github under Settings > SSH Keys
+### MacOS User
 
 
+1. You may already have git preinstalled, please run 
+```bash
+git --version
+```
+ to verify. If it return a version, then you are good to go. If not please continue.
+2. To install Git, we will use brew. You should check if you already have brew before installing it.
+```bash
+brew --version
+```
+3. If you already have brew installed jump to step 5
+Copy and paste the following into the terminal, then hit return(enter)
 
-## Getting Started with Github Classroom
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+4. Brew will then gives instructions for you to run 3 lines in the terminal. Run it! Below is an example but my 3 lines will be different from yours
+    ![git3](./git.assets/brew.jpg)
+5. Use brew to install git by running in the terminal
+```bash
+brew install git
+```
+6. Test if your git is ready
+```bash
+git --version
+```
+### Window User
 
-Please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSevzi4x0q_jwUyWH6euwSLc-B0qOkIFzZiAh1dVVQCnOO3inQ/viewform?usp=sharing) so that we can add your username to this GitHub classroom. 
-
-Please read the [Homework Submission Instructions](../chapter_syllabus/syllabus.md#homework-submission-guidelines) for the required format of the homework submission.
-
-
-### Setting Up Your Repository
-
-When a GitHub classroom assignment is created, we will share a link with you. Click the link and select "Accept this assignment". This will create a forked repository accessible by your personal GitHub account. Note that each team should create **only one** repository for each homework. You should discuss with your team members to decide who will host the repository and how to collaborate with each other.
-
-Follow these steps to get started:
-
-1. Look for an email with the Github Classroom assignment invitation
-2. Open the link and select "Accept this assignment" 
-3. Wait for your repository to be created - you'll see a confirmation page
-4. Find the repository URL by clicking the green "Code" button
-5. In your terminal:
-   ```bash
-   git clone REPO_URL
-   ```
-6. Follow the [Git tutorial](../chapter_workflow/git.md) to learn how to use Git and GitHub for your homework projects.
-
-### Submitting Assignments
-
-When submitting assignments:
-
-   ```bash 
-   git tag -a hw-ready-for-grade -m "Homework Submission"
-   git push origin main --tags
-   ```
-
-Make sure to commit all changes before tagging and pushing. We will **only** grade the commit with the tag `hw-ready-for-grade`. The late days will be counted based on the date of the commit with this tag. Do not make other commits after this tag.
+1. Test if git is installed by first run
+```bash
+git --version
+```
+to verify. If it return a version, then you are good to go. If not please continue.
+2. Go to [Git for Windows](https://git-scm.com/downloads/win) and click download (in the picture below)
+    ![git2](./git.assets/window_git_1.jpg)
+4. Install the git by click into the downloaded file, then a bunch of "Next","Install", and "Finish"
+5. Test if git is successfully installed by close and reopen Command Prompt. Then run:
+```bash
+git --version
+```
