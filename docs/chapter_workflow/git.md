@@ -103,28 +103,80 @@ You can follow the VS Code tutorial [here](https://code.visualstudio.com/docs/so
 
 Here are the visualization of the workflow on the commit status of the remote Github, local git, and local disk. You can cross reference to the text instructions below for better understanding. Note that we add a fork step if you want to contribute to a public repository, which you do not have the permission to push to. You can follow the simplified instructions in the figures below if you can access the original repository.
 === "<1>"
-    ![Clone the repository](workflow.assets/github_workflow_step1.png)
+    First, you have to let your computer know where you want to work!
+    We use cd following the directory. Mine will be different from yours
+    ```bash
+    cd ~/Desktop
+    mkdir example1618 
+    cd ./example1618
+    ```
+    The first command change the working directory to be my Desktop.<br>
+    The second commands creates a folder called example1618 in my current working directory (Desktop)<br>
+    The last command changes the working directory to the newly created folder<br>
+    ![Setting up your wd](workflow.assets/git_step_1.png)
 === "<2>"
-    ![Create a new working branch](workflow.assets/github_workflow_step2.png)
+    Next, we create an "imaginary" local repository and staging area with
+    ```bash
+    git init
+    ```
+    By imaginary, I meant that this create a a hidden folder ".git" in your working directory. With this, you now can keep track of your project progress. Don't believe me, you can run 
+    ```bash
+    ls -a
+    ```
+    ![Create a Local repo and staging area](workflow.assets/git_step_2.png)
 === "<3>"
-    ![Make changes to local files](workflow.assets/github_workflow_step3.png)
+    Next, we let our computer know which GitHub Repository is the one we want to work with.
+    ```bash
+    git remote add origin <your repo link>
+    ```
+    Your repo link can be found at: Your GitHub repo >> Code(Green button)>>SSH>>copy the link.
+    Since my link is "git@github.com:phucvu-nyu/testy.git", I run
+    ```bash
+    git remote add origin git@github.com:phucvu-nyu/testy.git
+    ```
+    This command tell your computer to name this GitHub repo "origin". You don't have to but are highly encourage to name it origin since this is the default setting. From now on, origin is the GitHub repo in this working directory.
+    ![Add a remote](workflow.assets/git_step_3.png)
 === "<4>"
-    ![Review code changes with git diff](workflow.assets/github_workflow_step4.png)
-
+    Finally, let's "pull" everything in this remote repo to our working directory. For the purpose of understing git basics, you can ignore the first command for now. Basically, "git pull" copy the content of the main branch from the remote repo to your local working directory and updates these content to you local repo. Meaning, your working directory, your local repo, and your remote repo have the same information.
+    ```bash
+    git checkout -b main
+    git pull origin main
+    ```
+    ![Review code changes with git diff](workflow.assets/git_step_4.png)
+    # For new version of git, you don't need the first command.
 === "<5>"
-    ![Commit local changes](workflow.assets/github_workflow_step5.png)
+    Congratulation! You now can download the content of your GitHub to your computer. But whatif you want to make changes? Say fill out the README.md form? As you can see the content (color) of your working directory is no longer the same as your local repo and your remote repo!
+    ![Commit local changes](workflow.assets/git_step_5.png)
 
 === "<6>"
-    ![Push branch to remote repository](workflow.assets/github_workflow_step6.png)
+    You first can view git status to see what are the differences between your working directory and your local repo
+    ```bash
+    git status
+    ```
+    ![See the changes made](workflow.assets/git_step_6.png)
 
 === "<7>"
-    ![Switch to main branch](workflow.assets/github_workflow_step7.png)
+    After seeing the changes you made, you can now choose what changes to add to the staging area. For example, I added my changes in the README.md file and the fruit.txt file but still need more time to work on my animal.txt file.
+    ```bash
+    git add README.md
+    git add fruit.txt
+    ```
+    ![Adding changes to stage area](workflow.assets/git_step_7.png)
 
 === "<8>"
-    ![Pull latest changes from remote](workflow.assets/github_workflow_step8.png)
+    Once you finished with your staging area. You can commit these changes to your local repo.<br>
+    Always leave a detailed comment as this will save you a lot of time looking back later!
+    ```bash
+    git commit -m"Filling out README.md and modified fruit.txt"
+    ```
+    ![Commit these changes to local repo](workflow.assets/git_step_8.png)
 
 === "<9>"
-    ![Return to working branch](workflow.assets/github_workflow_step9.png)
+    Now you are ready to push the changes from your local repo to your remote repo with git push
+    ```bash
+    git push origin main
+    ```
+    ![Pushing the from local repo to your remote repo](workflow.assets/git_step_9.png)
 
 === "<10>"
     ![Rebase working branch on main](workflow.assets/github_workflow_step10.png)
