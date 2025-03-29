@@ -102,6 +102,18 @@ Here are the visualization of the workflow on the commit status of the remote Gi
     ```
     ![Review code changes with git diff](workflow.assets/git_step_4.png)
     # For new version of git, you don't need the first command.
+=== "<4.5>"
+    Step 1 to 4 is so common that we have a quick command for this proces : git clone
+    ```bash
+    cd .. 
+    rm -rf  example1618
+    git clone <your repo link>
+    cd ./example1618
+    ```
+    The first command set your working directory back to the parent of the current working directory.<br>
+    The second command delete the folder example1618 in your current working directory <br>
+    The third command = step 1-->4 <br>
+    The last command set the working directory to the folder example1618 that is newly created from the git clone command
 === "<5>"
     Congratulation! You now can download the content of your GitHub to your computer. But whatif you want to make changes? Say fill out the README.md form, the fruit.txt file, and the first TWO questions in the animal.txt file. As you can see the content (color) of your working directory is no longer the same as your local repo and your remote repo!
     ![Commit local changes](workflow.assets/git_step_5.png)
@@ -146,116 +158,156 @@ Here are the visualization of the workflow on the commit status of the remote Gi
     ```bash
     git log
     ```
+    If we stop here, you should be able to use Git and GitHub as a personal storage and distributor of your code. And for a student, this should be how you mainly use it.
 === "<11>"
-    If we stop here, you should be able to use Git and GitHub as a personal storage and distributor of your code. And for a student, this should be how you mainly use it. However, in real life, you tend to have collaborators. And more often than not, they makes changes without your knowledge:
-    ![Resolve any merge conflicts](workflow.assets/github_workflow_step11.png)
+    However, in real life, you tend to have collaborators. And more often than not, some time they made changes without your knowledge:
+    Let's say remotely I go to GitHub and answer some questions in animal.txt intentionally wrong
+    Locally, I add and commit the change I made on the animal.txt.
+    ```bash
+    git add animal.txt
+    git commit -m"answer a few thing in animal.txt"
+    ```
+    In this case, if you push, there will be error!
+    Don't believe me, try!
+    ```bash
+    git push origin main
+    ```
+    ![conflict error](workflow.assets/git_step_11.png)
+    Previously, remote repo is different from local repo but we can still push. Why can't we now??
 
 === "<12>"
-    However, in real life, you tend to have collaborators. And more often than not, some time they made changes without your knowledge:
+    To understand the problem, first we have to understand how git performs version control. It create a history of state of your project with each commits.
+    Example:
     ```bash
-    A---B---C (origin/main updated remotely)
-     \
-      D---E (your local feature branch)
+    A---B---C--D--E (remote repo main)
     ```
-    In this case, if you push, git will be confused since it does not know which changes to keep.
+
+    Previously:
+    ```bash
+    A---B---C (remote repo main)           A---B---C--D--E (remote repo main)
+                                 -->
+    A---B---C---D---E (your local repo main)
+    ```
+    Now:
+    ```bash
+    A---B---C --F --G (remote repo main)            A---B---C--D--E (remote repo main)
+                                          --> ????
+     A---B---C---D---E (your local repo main)       A---B---C--F--G (remote repo main)
+    ```
+    In this case, if you push, git will be confused since it does not know which changes to update to remote repo.
 
 === "<13>"
-    ![Create pull request on GitHub](workflow.assets/github_workflow_step13.png)
-
+    Please don't try to run the code in this section:<br>
+    There are three direct options (that I know) that you can do from here:<br>
+    **Option 1: force push**
+    ```bash
+    git push -f origin main
+    ```
+    ```bash
+    A---B---C --F --G (remote repo main)        
+                                    -->       A---B---C--D--E (remote repo main)
+    A---B---C --D---E (your local repo main)       
+    ```
+    This OVERWRITES the remote repository with your local changes, discarding commits F and G completely. This is dangerous since we no longer have record of F and G<br>
+    **Option 2: rebase (recommend)**
+    ```bash
+    git fetch origin main # let your local knows about the updates in remote main
+    git rebase # add those updates to the history,then add the changes you made
+    git push
+    ```
+    ```bash
+    A---B---C---F---G (remote repo main)        
+                                 -->       A---B---C--F--G--D'--E' (remote repo main)
+    A---B---C---D---E (your local repo main)       
+    ```
+    This takes your local changes (D and E) and applies them after the latest remote changes (F and G), creating new commits (D' and E'). This is recommended since we still keep a record fo F and G while successfully implement our changes.<br>
+    **Option 3: fetch and merge (pull)**
+    ```bash
+    git fetch origin main
+    git merge origin/main # merge these updates with your current versions
+    git push
+    ```
+    ```bash
+    A---B---C --F --G (remote repo main)    A---B---C---F---G--- H  (remote repo main) 
+                                 -->                 \       /
+    A---B---C -- D---E (your local repo main)          D---E
+    ```
+    This creates a merge commit (H) that combines both histories. This option gives the best depiction of the history but it is also messy.
 === "<14>"
-    ![Review and discuss changes](workflow.assets/github_workflow_step14.png)
-
+    This is all cool and great! But what if I want to work on separate task and without constant worrying about all these conflicts?<br>
+    Another way to work around these conflict is to create a branch at the beginning of working on your task<br>
+    What is a branch then?<br>
+    A branch is like a parallel universe for your project where you can make changes that don't affect the main project.
+    ```bash
+       A---B---C---F---G (remote repo main)       
+                \                                   
+                 D---E (remote repo newbranch)  
+                                                --> A---B---C---D---E--H--J (remote repo newbranch)  
+       A---B---C---F---G (local repo main)       
+                \                                   
+                 D---E---H---J (local repo newbranch)         
+    ```
+    
 === "<15>"
-    ![New pull request](workflow.assets/github_workflow_step15.png)
-
+    There are two ways you can create a branch <br>
+    1. **Create directly on GitHub**<br>
+    Your repository>>Branch>>New branch>>name your new branch>>Create new branch<br>
+    Then pull, work, and push to it!
+    ```bash
+    git checkout -b newbranch
+    git pull origin newbranch
+    git add <filename>
+    git commit -m"comment"
+    git push origin newbranch
+    ```
+    2. **Create locally using Git commands then push to GitHub**
+    ```bash
+    git checkout -b newbranch2
+    # edit animal.txt
+    git add animal.txt
+    git commit -m"adding answers to animal.txt"
+    git push origin newbranch2
+    ```
 === "<16>"
-    ![Merge pull request](workflow.assets/github_workflow_step16.png)
-
-**Initial Repository Setup and Branch Creation**
-
-1. **Fork the Repository**
-      - Go to the original repository on GitHub
-      - Click the "Fork" button in the top-right corner to create your own copy
-      - This creates a copy of the repository under your GitHub account
-
-2. **Clone Your Forked Repository**
-      - Clone your fork (not the original repository)
-      ```bash
-      git clone git@github.com:YOUR_USERNAME/REPOSITORY_NAME.git
-      cd REPOSITORY_NAME
-      ```
-
-3. **Add Original Repository as Remote**
-      - Add the original repository as a remote called "upstream"
-      ```bash
-      git remote add upstream https://github.com/ORIGINAL_OWNER/REPOSITORY_NAME.git
-      ```
-      - You now have two remotes:
-        - `origin`: your fork
-        - `upstream`: original repository
-
-4. **Create a New Working Branch**
-      - Every new feature should be developed in a new branch
-      - Execute `git checkout -b my_feature` to create and switch to a new branch
-      - This effectively creates a local copy on a separate branch
-
-**Code Development and Local Changes**
+    When you are done with your task, you can create a pull request that merges your branch into the main branch.
+    <br>
+    1. Go to your GitHub repository
+    2. Click on "Pull requests" tab
+    3. Click the "New pull request" button
+    4. Select your branch to compare with main
+    5. Click "Create pull request"
+    6. Add a title and description explaining your changes
+    7. Click "Create pull request" again
+    <br>
+    <br>
+    After creating the pull request: <br>
+    - Team members can review your code<br>
+    - Discussions can happen in comments<br>
+    - Additional commits can be added to the PR<br>
+    - When approved, the branch can be merged<br>
+    <br>
+    After merging:<br>
+    - Your changes are now in the main branch<br>
+    - You can delete the feature branch<br>
+    - Everyone can pull the updated main branch<br>
 
 
-
-3. **Modify Local Code**
-      - Make necessary changes to source files
-
-4. **Review Code Changes**
-      - Use `git diff` to inspect modifications
-
-5. **Commit Local Changes**
-      - Use `git commit -a -m "Descriptive message about changes"`
-
-6. **Push Branch to Your Fork**
-      - Execute `git push -f origin my_feature`
-
-**Handling Remote Repository Updates**
-
-1. **Switch to Main Branch**
-      - Use `git checkout main` to return to the primary branch
-      - **Warning**: Commit your branch before switching to main branch, or you will lose all your changes.
-
-2. **Pull Latest Changes**
-      - Execute `git pull upstream main` to update local repository with remote modifications
-
-3. **Return to Working Branch**
-      - Switch back to my_feature branch using `git checkout my_feature`
-
-4. **Rebase Working Branch**
-      - Use `git rebase main` to integrate main branch updates into your working branch
-      - Note: Potential merge conflicts may require manual code selection
-      - Understand the difference between git pull and git rebase [here](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
-
-5. **Force Push Updated Branch**
-      - Execute `git push -f origin my_feature` to update remote repository with rebased changes
-
-**Creating Pull Request**
-
-1. **Create Pull Request**
-      - Go to the original repository on GitHub, click "Pull Requests"
-      - Click "New Pull Request"
-      - Choose "compare across forks"
-      - Select your fork and feature branch
-      - Fill in the PR description and submit
-
-2. **Merge Request**
-      - Project owner can use "squash and merge" in Github pull request to consolidate commits
-      - Checkout how "squash and merge" works [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges)
-
-
-!!! tip "Tip: Always rebase"
-    - Always rebase your branch on the main branch before creating a pull request.
-    - This will make your pull request history cleaner and easier to review.
-    - You can simply use `git pull origin my_feature --rebase` to rebase your branch on the github main branch.
-
-![Rebase](./git.assets/git_rebase.jpeg)
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 ## Advanced Git Usage
 
 ### Resolving Merge Conflicts

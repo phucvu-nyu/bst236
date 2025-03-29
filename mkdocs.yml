@@ -144,13 +144,13 @@ nav:
     - chapter_appendix/index.md
     - Installation: chapter_appendix/installation.md
     - Github and Git: chapter_appendix/github.md
-  - Chapter 1. GitHub and Git Introduction:
+  - Chapter 2. GitHub and Git Introduction:
     - chapter_workflow/index.md
     - GitHub: chapter_workflow/GitHub.md
     - Git: chapter_workflow/git.md
-    - Make: chapter_workflow/make.md
-    - Virtual Environment: chapter_workflow/venv.md
-    - Reproducible R: chapter_workflow/R.md
-    - Docker: chapter_workflow/docker.md
+    #- Make: chapter_workflow/make.md
+    #- Virtual Environment: chapter_workflow/venv.md
+    #- Reproducible R: chapter_workflow/R.md
+    #- Docker: chapter_workflow/docker.md
 
 
