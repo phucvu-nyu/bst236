@@ -135,9 +135,10 @@ Please <br>
 1. Open Tools>> Global Options>>Terminal. Then choose Git Bash for New terminals open with>> Apply<br>
 2. Tools >> Terminal >> New Terminal<br>
 ## But why are we learning about terminal? What are Unix Commands?
-1. Unix allow for quick and efficient file management <br>
-2. Many research projects require you to do your computation on remote servers and high-performance computing clusters. Unix commands help you to communicate with these remote clusters <br>
-3. If you are an expert, which I am not, mastering Unix will save you a lot of time since you are communicating directly with your computer
+1. Git is way more efficient if you know some basic Unix commands<br>
+2. Unix allow for quick and efficient file management <br>
+3. Many research projects require you to do your computation on remote servers and high-performance computing clusters. Unix commands help you to communicate with these remote clusters <br>
+4. If you are an expert, which I am not, mastering Unix will save you a lot of time since you are communicating directly with your computer
 
 ## Basic Unix commands
 
@@ -195,5 +196,8 @@ Please <br>
     rmdir ./NYU1111 
     rmdir ~/Desktop/NYU1618
     ```
+=== "<7>"
+    Use Tab for autocompletion
+    
     
 [Interested in more advance Unix?](https://rafalab.dfci.harvard.edu/dsbook-part-1/productivity/unix.html#advanced-unix)

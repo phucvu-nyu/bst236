@@ -151,7 +151,7 @@ nav:
     - Git: chapter_workflow/git.md
     #- Make: chapter_workflow/make.md
     - What to put on GitHub: chapter_workflow/project.md
-    #- Reproducible R: chapter_workflow/R.md
+    - Reproducible Research: chapter_workflow/practice.md
     #- Docker: chapter_workflow/docker.md
 
 
