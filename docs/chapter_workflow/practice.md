@@ -110,3 +110,8 @@ Use softwares like OneNote to document the process of your research. These inclu
     - Summary of the papers you read<br>
     - Notes for your meetings<br>
 You will never know if you have to go back to your old project!
+## Be patient with yourself!
+I must admit, I do not follow these rules 100% of the time.<br>
+It is a skills and like every skills, it needs practice.<br>
+As long as you are trying to be better! You will be better!<br>
+Thank you!
