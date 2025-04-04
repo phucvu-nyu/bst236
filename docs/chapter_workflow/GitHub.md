@@ -1,10 +1,10 @@
 # What is GitHub
 
-- A web-based platform that uses Git, a version control system, to allow people to collaborate, store, manage, and share code. (Google tells me this)
+- A web-based platform that uses Git, a version control system, to allow people to collaborate on, store, manage, and share code. (Google tells me this)
 
-- A social media where you can stalk, and even contribute, to others' work.
+- A social media where you can stalk, leverage, and even contribute to others' work.
 
-- A place where you upload your projects so other people can see and use your codes.
+- A place where you upload your amazing and awesome projects so other people can see and use your codes.
 
 
 
@@ -27,4 +27,12 @@
 7. Click on the "Add a README file" checkbox
 8. Click "Create repository"
 
+## Making changes directly to your repository:
 
+1. Click on the file you want to make change
+2. Make the change
+3. Commit Changes ...
+4. Give a description
+5. Commit change
+
+A bit cumbersome, isn't it?

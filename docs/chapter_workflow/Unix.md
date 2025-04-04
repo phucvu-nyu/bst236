@@ -165,7 +165,7 @@ Please <br>
     ```bash
     ls
     ```
-    `ls` is short for list. This will displays the (non-hidden) contents of your current working directory
+    `ls` is short for list. This displays the (non-hidden) contents of your current working directory
 === "<5>"
     `cd`: Change your working directory
     ```bash
@@ -180,7 +180,7 @@ Please <br>
 === "<6>"
     `mkdir`: Make a new directory<br>
     `rmdir`: Remove an empty directory<br>
-    `rm -r`: Remove a non-empty directory DANGEROUS!! No do over in the terminal!
+    `rm -r`: Remove a non-empty directory DANGEROUS!! There's no undo in the terminal!
     ```bash
     mkdir <new working directory>
     ```

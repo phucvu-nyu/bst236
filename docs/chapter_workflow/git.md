@@ -7,17 +7,17 @@ Version control is essential for:
 3. **Backup and Reproducibility**: Go back to any previous state of your project
 4. **Documentation**: Document changes and their reasons
 
-## Let install Git
+## Let's Install Git
 
 
 ## Git Basics
 
 If you are using VS Code, you can check the tutorial [here](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git).
 
-### Setting Up Git the first time
+### Setting Up Git for the First Time
 
-In order for Git to work with GitHub, it would need to know your GitHub account.<br>
-First time setup:
+In order for Git to work with GitHub, it needs to know your GitHub account.<br>
+First-time setup:
 ```bash
 git config --global user.name "Your GitHub Name"
 git config --global user.email "your.email@example.com"
@@ -50,10 +50,17 @@ In order for GitHub to trust your Git, you will also need to set up a key to let
     ```
     This will print out the key you generated. Copy this!!
 5. Now you would need to add this key to GitHub. Go to your GitHub page>>Click on the avatar(upper right)>>Settings>>SSH and GPG keys(on the left panel)>>New SSH key>>Give a title (exp: my computer)>>paste the key you copied to Key>>Add SSH Key
-
+6. To test if you have successfully connect your computer to your GitHub, go back to your terminal and run
+    ```bash
+    ssh -T git@github.com
+    ```
+7. If this is the first time, the key is used, it will add you if you really want to connect. Type yes and hit Enter (return)
 ### GitHub Collaboration Workflow
 
-You can follow the VS Code tutorial [here](https://code.visualstudio.com/docs/sourcecontrol/github) for the Github collaboration workflow on VS Code. We suggest the following workflow for contributing to public repositories. You may use [Make](make.md) to automate your workflow instead of memorizing all the commands.
+Below is a big picture of the GitHub Workflow. Don't worry if you don't get it! The main thing to remember is that we have FOUR main components: 
+![GitHub Workflow](workflow.assets/full_workflow.png)
+*Figure: GitHub Workflow. Source: [Introduction to Data Science](https://rafalab.dfci.harvard.edu/dsbook-part-1/productivity/unix.html)*
+
 
 Here are the visualization of the workflow on the commit status of the remote Github, local git, and local directory.
 === "<0>"
@@ -77,7 +84,7 @@ Here are the visualization of the workflow on the commit status of the remote Gi
     ```bash
     git init
     ```
-    By imaginary, I meant that this create a a hidden folder ".git" in your working directory. With this, you now can keep track of your project progress. Don't believe me, you can run 
+    By imaginary, I meant that this creates a hidden folder ".git" in your working directory. With this, you now can keep track of your project progress. Don't believe me, you can run 
     ```bash
     ls -a
     ```
@@ -92,10 +99,10 @@ Here are the visualization of the workflow on the commit status of the remote Gi
     ```bash
     git remote add origin git@github.com:phucvu-nyu/example1618.git
     ```
-    This command tell your computer to name this GitHub repo "origin". You don't have to but are highly encourage to name it origin since this is the default setting. From now on, origin is the GitHub repo in this working directory.
+    This command tells your computer to name this GitHub repo "origin". You don't have to but are highly encouraged to name it origin since this is the default setting. From now on, origin is the GitHub repo in this working directory.
     ![Add a remote](workflow.assets/git_step_3.png)
 === "<4>"
-    Finally, let's "pull" everything in this remote repo to our working directory. For the purpose of understing git basics, you can ignore the first command for now. Basically, "git pull" copy the content of the main branch from the remote repo to your local working directory and updates these content to you local repo. Meaning, your working directory, your local repo, and your remote repo have the same information.
+    Finally, let's "pull" everything in this remote repo to our working directory. For the purpose of understanding git basics, you can ignore the first command for now. Basically, "git pull" copy the content of the main branch from the remote repo to your local working directory and updates these content to you local repo. Meaning, your working directory, your local repo, and your remote repo have the same information.
     ```bash
     git checkout -b main
     git pull origin main
@@ -103,7 +110,7 @@ Here are the visualization of the workflow on the commit status of the remote Gi
     ![Review code changes with git diff](workflow.assets/git_step_4.png)
     # For new version of git, you don't need the first command.
 === "<4.5>"
-    Step 1 to 4 is so common that we have a quick command for this proces : git clone
+    Steps 1 to 4 are so common that we have a quick command for this process: git clone
     ```bash
     cd .. 
     rm -rf  example1618
@@ -119,7 +126,7 @@ Here are the visualization of the workflow on the commit status of the remote Gi
     The third command = step 1-->4 <br>
     The last command set the working directory to the folder example1618 that is newly created from the git clone command
 === "<5>"
-    Congratulation! You now can download the content of your GitHub to your computer. But whatif you want to make changes? Say fill out the README.md form, the fruit.txt file, and the first TWO questions in the animal.txt file. As you can see the content (color) of your working directory is no longer the same as your local repo and your remote repo!
+    Congratulations! You now can download the content from your GitHub to your computer. But what if you want to make changes? Say fill out the README.md form, the fruit.txt file, and the first TWO questions in the animal.txt file. As you can see the content (color) of your working directory is no longer the same as your local repo and your remote repo!
     ![Commit local changes](workflow.assets/git_step_5.png)
 
 === "<6>"
@@ -164,7 +171,7 @@ Here are the visualization of the workflow on the commit status of the remote Gi
     Hit q to escape the log setup<br>
     If we stop here, you should be able to use Git and GitHub as a personal storage and distributor of your code. And for a student, this should be how you mainly use it.
 === "<11>"
-    However, in real life, you tend to have collaborators. And more often than not, some time they made changes without your knowledge:
+    However, in real life, you tend to have collaborators. And more often than not, sometimes they make changes without your knowledge:
     Let's say remotely I go to GitHub and answer some questions in animal.txt intentionally wrong
     Locally, I add and commit the change I made on the animal.txt.
     ```bash
@@ -225,13 +232,13 @@ Here are the visualization of the workflow on the commit status of the remote Gi
                                  -->       A---B---C--F--G--D'--E' (remote repo main)
     A---B---C---D---E (your local repo main)       
     ```
-    This takes your local changes (D and E) and applies them after the latest remote changes (F and G), creating new commits (D' and E'). This is recommended since we still keep a record fo F and G while successfully implement our changes.<br>
+    This takes your local changes (D and E) and applies them after the latest remote changes (F and G), creating new commits (D' and E'). This is recommended since we still keep a record of F and G while successfully implementing our changes.<br>
 
-    However, if you have some conflict directly with your remote:
+    However, if you have some conflicts directly with your remote:
     ```bash
     git fetch origin main # let your local knows about the updates in remote main
     git rebase origin/main # add those updates to the history,then add the changes you made
-    # resolve conflict
+    # resolve conflicts
     git add .
     git rebase --continue
     git push origin main
@@ -286,13 +293,13 @@ Here are the visualization of the workflow on the commit status of the remote Gi
 === "<16>"
     When you are done with your task, you can create a pull request that merges your branch into the main branch.
     <br>
-    1. Go to your GitHub repository
-    2. Click on "Pull requests" tab
-    3. Click the "New pull request" button
-    4. Select your branch to compare with main
-    5. Click "Create pull request"
-    6. Add a title and description explaining your changes
-    7. Click "Create pull request" again
+    1. Go to your GitHub repository<br>
+    2. Click on "Pull requests" tab<br>
+    3. Click the "New pull request" button<br>
+    4. Select your branch to compare with main<br>
+    5. Click "Create pull request"<br>
+    6. Add a title and description explaining your changes<br>
+    7. Click "Create pull request" again<br>
     <br>
     <br>
     After creating the pull request: <br>
