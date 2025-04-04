@@ -88,9 +88,10 @@ Here are the visualization of the workflow on the commit status of the remote Gi
     git remote add origin <your repo link>
     ```
     Your repo link can be found at: Your GitHub repo >> Code(Green button)>>SSH>>copy the link.
-    Since my link is "git@github.com:phucvu-nyu/testy.git", I run
+    Since my link is "git@github.com:githubnyu/example1618.git", I run
     ```bash
-    git remote add origin git@github.com:phucvu-nyu/testy.git
+    # Please ignore the -second part as this depends on my compputer setting
+    git remote add origin git@github.com-second:githubnyu/example1618.git
     ```
     This command tell your computer to name this GitHub repo "origin". You don't have to but are highly encourage to name it origin since this is the default setting. From now on, origin is the GitHub repo in this working directory.
     ![Add a remote](workflow.assets/git_step_3.png)
