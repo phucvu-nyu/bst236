@@ -228,7 +228,7 @@ Here are the visualization of the workflow on the commit status of the remote Gi
     This takes your local changes (D and E) and applies them after the latest remote changes (F and G), creating new commits (D' and E'). This is recommended since we still keep a record fo F and G while successfully implement our changes.<br>
 
     However, if you have some conflict directly with your remote:
-        ```bash
+    ```bash
     git fetch origin main # let your local knows about the updates in remote main
     git rebase origin/main # add those updates to the history,then add the changes you made
     # resolve conflict
