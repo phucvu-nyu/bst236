@@ -133,8 +133,7 @@ Here are the visualization of the workflow on the commit status of the remote Gi
     After seeing the changes you made, you can now choose what changes to add to the staging area. For example, I added my changes in the README.md and the fruit.txt but still need more time to work on my animal.txt file.
     ```bash
     git add README.md
-    git add fruit.txt
-    git add animal.txt
+    git add fruit.txt animal.txt
     ```
     But wait! The animal.txt needs more work, so maybe we should not add this to the staging area now! You can use git reset to undo git add.
     ```bash
@@ -215,10 +214,11 @@ Here are the visualization of the workflow on the commit status of the remote Gi
     ```
     This OVERWRITES the remote repository with your local changes, discarding commits F and G completely. This is dangerous since we no longer have record of F and G<br>
     **Option 2: rebase (recommend)**
+    If you don't have any direct conflict with the remote, this should be enough
     ```bash
     git fetch origin main # let your local knows about the updates in remote main
-    git rebase # add those updates to the history,then add the changes you made
-    git push
+    git rebase origin/main # add those updates to the history,then add the changes you made
+    git push origin main
     ```
     ```bash
     A---B---C---F---G (remote repo main)        
@@ -226,11 +226,21 @@ Here are the visualization of the workflow on the commit status of the remote Gi
     A---B---C---D---E (your local repo main)       
     ```
     This takes your local changes (D and E) and applies them after the latest remote changes (F and G), creating new commits (D' and E'). This is recommended since we still keep a record fo F and G while successfully implement our changes.<br>
+
+    However, if you have some conflict directly with your remote:
+        ```bash
+    git fetch origin main # let your local knows about the updates in remote main
+    git rebase origin/main # add those updates to the history,then add the changes you made
+    # resolve conflict
+    git add .
+    git rebase --continue
+    git push origin main
+    ```
     **Option 3: fetch and merge (pull)**
     ```bash
     git fetch origin main
     git merge origin/main # merge these updates with your current versions
-    git push
+    git push origin main
     ```
     ```bash
     A---B---C --F --G (remote repo main)    A---B---C---F---G--- H  (remote repo main) 
