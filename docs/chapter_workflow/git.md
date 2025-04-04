@@ -57,7 +57,7 @@ You can follow the VS Code tutorial [here](https://code.visualstudio.com/docs/so
 
 Here are the visualization of the workflow on the commit status of the remote Github, local git, and local directory.
 === "<0>"
-    To better follow these example, please first sign in to your GitHub account and go to this [example repository](https://github.com/phucvu-nyu/example1618).<br>
+    To better follow these example, please first sign in to your GitHub account and go to this [example repository](https://github.com/githubnyu/example1618).<br>
     Then click Fork >> Create Fork<br>
     Remember that GitHub is a place to share your code. What you just did is basically copying my whole project and create a repository to store it in your account!
 === "<1>"
@@ -88,10 +88,9 @@ Here are the visualization of the workflow on the commit status of the remote Gi
     git remote add origin <your repo link>
     ```
     Your repo link can be found at: Your GitHub repo >> Code(Green button)>>SSH>>copy the link.
-    Since my link is "git@github.com:githubnyu/example1618.git", I run
+    Since my link is "git@github.com:phucvu-nyu/example1618.git", I run
     ```bash
-    # Please ignore the -second part as this depends on my compputer setting
-    git remote add origin git@github.com-second:githubnyu/example1618.git
+    git remote add origin git@github.com:phucvu-nyu/example1618.git
     ```
     This command tell your computer to name this GitHub repo "origin". You don't have to but are highly encourage to name it origin since this is the default setting. From now on, origin is the GitHub repo in this working directory.
     ![Add a remote](workflow.assets/git_step_3.png)
@@ -108,7 +107,11 @@ Here are the visualization of the workflow on the commit status of the remote Gi
     ```bash
     cd .. 
     rm -rf  example1618
+    ```
+    ```bash
     git clone <your repo link>
+    ```
+    ```bash
     cd ./example1618
     ```
     The first command set your working directory back to the parent of the current working directory.<br>
@@ -159,6 +162,7 @@ Here are the visualization of the workflow on the commit status of the remote Gi
     ```bash
     git log
     ```
+    Hit q to escape the log setup<br>
     If we stop here, you should be able to use Git and GitHub as a personal storage and distributor of your code. And for a student, this should be how you mainly use it.
 === "<11>"
     However, in real life, you tend to have collaborators. And more often than not, some time they made changes without your knowledge:
